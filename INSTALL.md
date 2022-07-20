@@ -37,9 +37,9 @@ Voilà, le modèle tourne, mais en fait ça ne sert pas à grand chose. L'idée 
 Comment démarrer un projet avec ce modèle ?
 -------------------------------------------
 
-On peut se baser sur React-modele pour démarrer un *nouveau* projet, ou bien pour travailler sur un challenge avec une base de code déjà existante.
+On peut se baser sur React-modele pour démarrer un _nouveau_ projet, ou bien pour travailler sur un challenge avec une base de code déjà existante.
 
-Dans les deux cas, il s'agit essentiellement de copier/coller les parties intéressantes du modèle dans le dossier du projet/challenge, sans écraser d'éventuels fichiers spécifiques. 
+Dans les deux cas, il s'agit essentiellement de copier/coller les parties intéressantes du modèle dans le dossier du projet/challenge, sans écraser d'éventuels fichiers spécifiques.
 
 Pour ce faire :
 
@@ -74,6 +74,7 @@ Le mode d'utilisation par défaut consiste à lancer un serveur de dev avec `yar
 Webpack peut toutefois produire une version concrète du projet dans un dossier `dist/` avec la commande `yarn build`.
 
 `build` permet de construire le projet pour la **production** (version prête pour hébergement).
+
 - Assemblage des fichiers
 - Copie de fichiers
 - Nettoyage du code
@@ -119,7 +120,6 @@ Permet de dupliquer un fichier / dossier
 
 `ext install mrmlnc.vscode-duplicate`
 
-
 ### Extension Navigateur React Dev Tools
   
 - [pour Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
@@ -127,7 +127,7 @@ Permet de dupliquer un fichier / dossier
 
 ### Extension Navigateur Redux Dev Tools
 
-> https://github.com/reduxjs/redux-devtools
+> <https://github.com/reduxjs/redux-devtools>
 
 - [pour Chrome](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd)
 - [pour Firefox](https://addons.mozilla.org/en-US/firefox/addon/reduxdevtools/)
@@ -143,10 +143,9 @@ Principaux Outils
 - [ESLint](https://eslint.org/)
 - [React](https://reactjs.org/)
 
-
 ### Webpack
 
-*Task Runner*, *Builder* ou *Bundler* ie. automatisation de tâches : transpilation JS par Babel, conversion Sass -> CSS, optimisation du build, etc.
+_Task Runner_, _Builder_ ou _Bundler_ ie. automatisation de tâches : transpilation JS par Babel, conversion Sass -> CSS, optimisation du build, etc.
 
 - [`webpack`](https://github.com/webpack/webpack) - Packageur de modules et ressources.
 - [`webpack-cli`](https://github.com/webpack/webpack-cli) - Interface en ligne de commande pour Webpack.
@@ -190,7 +189,7 @@ Transpilation ES6/JSX -> ES5.
 - [`eslint`](https://github.com/eslint/eslint) - ESLint, linter / analyseur de code JS.
 - [`babel-eslint`](https://github.com/babel/babel-eslint) - Analyse le code Babel.
 - [`eslint-config-airbnb`](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb) - Configuration Airbnb pour ESLint.
-- Plugins : 
+- Plugins :
   - [`eslint-plugin-import`](https://github.com/benmosher/eslint-plugin-import) - Analyse les imports de fichiers.
     - [`eslint-import-resolver-alias`](https://github.com/johvin/eslint-import-resolver-alias) - Permet de définir des alias pour les dossiers.
   - [`eslint-plugin-react`](https://github.com/yannickcr/eslint-plugin-react) - Analyse le code React.
@@ -239,50 +238,49 @@ Prérequis (déjà présents sur la VM)
 sudo apt install nodejs
 ```
 
-**Pour les autres distributions**, vérifier https://github.com/nodesource/distributions/blob/master/README.md#installation-instructions
+**Pour les autres distributions**, vérifier <https://github.com/nodesource/distributions/blob/master/README.md#installation-instructions>
 
-Ou https://nodejs.org/en/download/package-manager/
+Ou <https://nodejs.org/en/download/package-manager/>
 
 **Alternative via NVM**  
 NVM est un outil permettant de gérer plusieurs installations de plusieurs versions de node
+
 - [Installer NVM](https://github.com/nvm-sh/nvm#installing-and-updating)
 - [Utiliser NVM](https://github.com/nvm-sh/nvm#usage)
+
 </details>
 
 <details>
   <summary>MacOS</summary>
 
-- A télécharger directement sur https://nodejs.org/en/
+- A télécharger directement sur <https://nodejs.org/en/>
 
 Ou
 
 - [Installer homebrew](https://brew.sh/)
-- Puis node avec la commande `brew install node` 
-
+- Puis node avec la commande `brew install node`
 
 </details>
 
 <details>
   <summary>Windows</summary>
 
-
-- A télécharger directement sur https://nodejs.org/en/
+- A télécharger directement sur <https://nodejs.org/en/>
 
 Ou
 
 - [Installer chocolatey](https://chocolatey.org/)
-- Puis node avec la commande `choco install nodejs` 
-
+- Puis node avec la commande `choco install nodejs`
 
 </details>
 
 ## Mettre à jour node
 
-
 <details>
   <summary>Linux</summary>
 
 **Méthode via npm**
+
 ```
 sudo npm cache clean -f
 sudo npm install -g n
@@ -290,40 +288,39 @@ sudo n stable
 ```
 
 **Si vous utilisez NVM**  
+
 - [Référez vous à l'utilisation de nvm](https://github.com/nvm-sh/nvm#usage)
+
 </details>
 
 <details>
   <summary>MacOS</summary>
 
-- A télécharger directement sur https://nodejs.org/en/
+- A télécharger directement sur <https://nodejs.org/en/>
 
 Ou
 
 **Méthode via npm**
+
 ```
 sudo npm cache clean -f
 sudo npm install -g n
 sudo n stable
 ```
 
-
 </details>
 
 <details>
   <summary>Windows</summary>
 
-
-- A télécharger directement sur https://nodejs.org/en/
+- A télécharger directement sur <https://nodejs.org/en/>
 
 Ou
 
-- Si vous utilisez [chocolatey](https://chocolatey.org/) `choco upgrade nodejs` 
-
+- Si vous utilisez [chocolatey](https://chocolatey.org/) `choco upgrade nodejs`
 
 </details>
 
-
 ## Installer yarn
 
-Suivre https://classic.yarnpkg.com/en/docs/install/ en fonction de votre OS
+Suivre <https://classic.yarnpkg.com/en/docs/install/> en fonction de votre OS
