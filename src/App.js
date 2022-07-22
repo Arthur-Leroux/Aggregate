@@ -1,48 +1,27 @@
-import React from "react";
-import Login from "./components/Login";
-//import { BrowserRouter } from 'react-router-dom';
-//import { useState } from "react";
+import React from 'react';
+import Login from './components/Login/index';
+import Register from './components/Register/Register';
+import './App.css';
 
 const App = () => {
-  // const [users, setUsers] = useState([
-  //   { id: 1, nom: "Arthur Leroux" },
-   
-  // ]);
-
-  return (
-    <div>
-      
-        <Login />
-     
-    </div>
-  );
-  
-  };
-
-
-
-//**====================================================
-
-//** essaie de hook a blanc
-
-// // une fonction pure qui renvoie, pour un tableau de d'utilisateur donné
-// // les utilisateurs inscrit en BDD
-// //cas particulier si l'utilisateur n'est pas en BDD lui renvoyer un message
-// const userLogin = (dataUser) => {
-//   if (dataUser === dataElement) {
-//     return console.log("/pageprincipale");
-
-//    //** dataElement serait la table d'utilisateur en BDD ?
-//   }
-//   else {
-//     console.log("tu n'est pas inscrit sur notre site");
-//   }
-// };
-// function App() {
-//   //**  Pourquoi setdataUser n'est jamais lu ?? a méditer pendant le repas ou pas !
-// const [dataUser, setdataUser] = useState([]); //**  tableau vide ou string vide ?
-
-//   return <Login valueEmail={setdataUser(dataUser)} />;
-// }
+	return (
+		<div className='App'>
+			<h1 className='App_title_main'>
+				<strong>Aggregate</strong>
+			</h1>
+			<h2 className='App_subtitle'>devs' favorite spot</h2>
+			<section className='App_auth_panel'>
+				<h3 className='App_invite_auth'>Please sign in</h3>
+				<div className='App_login'>
+					<Login />
+				</div>
+				<h3 className='App_invite_auth'>or register</h3>
+				<div className='App_register'>
+					<Register />
+				</div>
+			</section>
+		</div>
+	);
+};
 
 export default App;
