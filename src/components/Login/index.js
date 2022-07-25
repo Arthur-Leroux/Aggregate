@@ -36,9 +36,9 @@ export default function Login() {
 					}}
 				></input>
 				<input
-					className='section_input_username'
+					className='section_input_password'
 					type='password'
-					placeholder='password'
+					placeholder='Password'
 					value={password}
 					onChange={(event) => {
 						setPassword(event.target.value);
