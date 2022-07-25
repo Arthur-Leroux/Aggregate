@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './register.css';
+import axios from 'axios';
 
 export default function Register() {
 	const [name, setName] = useState('');
@@ -8,15 +9,28 @@ export default function Register() {
 
 	const [password, setPassword] = useState('');
 
-	const handleSubmit = (event) => {
+	const handleSubmitPost = (event) => {
 		event.preventDefault();
 		console.log({ email, name, password });
-		fetch();
+		axios({
+			url: '/',
+			method: 'POST',
+			baseURL: process.env.REACT_APP_API_URL,
+		})
+			.then((response) => {
+				console.log('response :', response);
+			})
+			.catch((error) => {
+				console.log('error :', error);
+			})
+			.finally(() => {
+				console.log("it's ok");
+			});
 	};
 
 	return (
 		<section className='register_section'>
-			<form onSubmit={handleSubmit} className='register_form'>
+			<form onSubmit={handleSubmitPost} className='register_form'>
 				<input
 					className='register_input_name'
 					type='text'
