@@ -1,25 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import './login.css';
 import axios from 'axios';
+import { UserContext } from '../UserProvider/UserProvider';
 
 export default function Login() {
 	const [email, setEmail] = useState('');
 
-	const [password, setPassword] = useState('');
+	const [username, setUsername] = useState('');
+
+	const { setUser } = useContext(UserContext);
 
 	const handleSubmitGet = (event) => {
 		event.preventDefault();
-		console.log({ email, password });
+		console.log({ email, username });
 
 		axios({
 			method: 'get',
-			url: process.env.REACT_APP_API_URL,
+			url: `https://jsonplaceholder.typicode.com/users/`,
+			params: { username: username, email: email },
 		})
 			.then((response) => {
 				console.log('response :', response);
+				//Todo: setUser({ email, username });
 			})
 			.catch((error) => {
 				console.log('error :', error);
+				setUser(false);
 			});
 	};
 
@@ -36,12 +42,12 @@ export default function Login() {
 					}}
 				></input>
 				<input
-					className='section_input_password'
-					type='password'
-					placeholder='Password'
-					value={password}
+					className='section_input_username'
+					type='username'
+					placeholder='username'
+					value={username}
 					onChange={(event) => {
-						setPassword(event.target.value);
+						setUsername(event.target.value);
 					}}
 				></input>
 

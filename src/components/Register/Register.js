@@ -13,18 +13,16 @@ export default function Register() {
 		event.preventDefault();
 		console.log({ email, name, password });
 		axios({
-			url: '/',
+			url: '/', //! A modifier en fonction du back
 			method: 'POST',
 			baseURL: process.env.REACT_APP_API_URL,
+			data: { email, firstname: name, password }, //! Attention au firstName ou firstname
 		})
 			.then((response) => {
 				console.log('response :', response);
 			})
 			.catch((error) => {
 				console.log('error :', error);
-			})
-			.finally(() => {
-				console.log("it's ok");
 			});
 	};
 
