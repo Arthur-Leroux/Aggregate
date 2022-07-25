@@ -10,7 +10,9 @@ export const useIsUserConnected = () => {
 
 export default function UserProvider(props) {
 	const [user, setUser] = useState(false);
+
 	console.log(user);
+
 	return (
 		<UserContext.Provider value={{ user, setUser }}>
 			{props.children}

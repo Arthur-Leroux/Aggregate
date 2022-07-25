@@ -1,4 +1,5 @@
 import React, { useState, useContext } from 'react';
+
 import './login.css';
 import axios from 'axios';
 import { UserContext } from '../UserProvider/UserProvider';
@@ -13,6 +14,8 @@ export default function Login() {
 	const handleSubmitGet = (event) => {
 		event.preventDefault();
 		console.log({ email, username });
+
+		setUser({ email, username });
 
 		axios({
 			method: 'get',
