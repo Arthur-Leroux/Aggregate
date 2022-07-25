@@ -5,24 +5,21 @@ import axios from 'axios';
 export default function Login() {
 	const [email, setEmail] = useState('');
 
-	const [username, setUsername] = useState('');
+	const [password, setPassword] = useState('');
 
 	const handleSubmitGet = (event) => {
 		event.preventDefault();
-		console.log({ email, username });
+		console.log({ email, password });
+
 		axios({
-			url: '/users',
-			method: 'GET',
-			baseURL: process.env.REACT_APP_API_URL,
+			method: 'get',
+			url: process.env.REACT_APP_API_URL,
 		})
 			.then((response) => {
 				console.log('response :', response);
 			})
 			.catch((error) => {
 				console.log('error :', error);
-			})
-			.finally(() => {
-				console.log("it's ok");
 			});
 	};
 
@@ -40,11 +37,11 @@ export default function Login() {
 				></input>
 				<input
 					className='section_input_username'
-					type='username'
-					placeholder='username'
-					value={username}
+					type='password'
+					placeholder='password'
+					value={password}
 					onChange={(event) => {
-						setUsername(event.target.value);
+						setPassword(event.target.value);
 					}}
 				></input>
 
