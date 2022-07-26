@@ -19,12 +19,12 @@ export default function Login() {
 
 		axios({
 			method: 'get',
-			url: `https://jsonplaceholder.typicode.com/users/`,
+			url: `https://jsonplaceholder.typicode.com/users/`, //TODO: Remplacer cette adresse par celle du Back
 			params: { username: username, email: email },
 		})
 			.then((response) => {
 				console.log('response :', response);
-				//Todo: setUser({ email, username });
+				//TODO: setUser({ email, username });
 			})
 			.catch((error) => {
 				console.log('error :', error);
