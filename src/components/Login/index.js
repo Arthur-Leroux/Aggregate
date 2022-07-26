@@ -7,24 +7,24 @@ import { UserContext } from '../UserProvider/UserProvider';
 export default function Login() {
 	const [email, setEmail] = useState('');
 
-	const [username, setUsername] = useState('');
+	const [password, setPassword] = useState(''); // changement de userName en password pour la page login
 
 	const { setUser } = useContext(UserContext);
 
 	const handleSubmitGet = (event) => {
 		event.preventDefault();
-		console.log({ email, username });
+		console.log({ email, password}); // => changement de userName en password pour la page login
 
-		setUser({ email, username });
+		setUser({ email, password }); // => changement de userName en password pour la page login
 
 		axios({
 			method: 'get',
 			url: `https://jsonplaceholder.typicode.com/users/`, //TODO: Remplacer cette adresse par celle du Back
-			params: { username: username, email: email },
+			params: { password, email: email }, // => changement de userName en password pour la page login 
 		})
 			.then((response) => {
 				console.log('response :', response);
-				//TODO: setUser({ email, username });
+				//TODO: setUser({ email, password });
 			})
 			.catch((error) => {
 				console.log('error :', error);
@@ -46,11 +46,11 @@ export default function Login() {
 				></input>
 				<input
 					className='section_input_username'
-					type='username'
-					placeholder='username'
-					value={username}
+					type='Password'  // => changement de userName en password pour la page login
+					placeholder='Password'   // => changement de userName en password pour la page login
+					value={password}  // => changement de userName en password pour la page login
 					onChange={(event) => {
-						setUsername(event.target.value);
+						setPassword(event.target.value);  // => changement de userName en password pour la page login
 					}}
 				></input>
 
