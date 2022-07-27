@@ -20,6 +20,7 @@ export default function Router() {
 				<Route element={<AuthenticatedRoute />}>
 					{/* Ici les routes réservées aux utilisateurs connectés */}
 					<Route exact path='/' element={<Home />} />
+					{/* <Route exact path='/profile' element={<Profile />} /> */}
 				</Route>
 
 				{/* Ici, les routes accessibles peu importe si on est connecté ou pas  */}

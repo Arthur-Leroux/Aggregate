@@ -1,5 +1,6 @@
 import React from 'react';
 import { Navigate, Outlet } from 'react-router-dom';
+import AuthenticatedLayout from '../AuthenticatedLayout/AuthenticatedLayout';
 import { useIsUserConnected } from '../UserProvider/UserProvider';
 
 /**
@@ -15,5 +16,9 @@ export default function ProtectedRoute() {
 		return <Navigate to='/login' />;
 	}
 
-	return <Outlet />;
+	return (
+		<AuthenticatedLayout>
+			<Outlet />
+		</AuthenticatedLayout>
+	);
 }

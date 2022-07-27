@@ -1,6 +1,7 @@
 import React from 'react';
 import { Navigate, Outlet } from 'react-router-dom';
 import { useIsUserConnected } from '../UserProvider/UserProvider';
+import GuestLayout from '../GuestLayout/GuestLayout';
 
 /**
  * Ce composant sert à rediriger l'utilisateur vers la page home
@@ -15,5 +16,9 @@ export default function GuestRoute() {
 		return <Navigate to='/' />;
 	}
 
-	return <Outlet />;
+	return (
+		<GuestLayout>
+			<Outlet />
+		</GuestLayout>
+	);
 }
