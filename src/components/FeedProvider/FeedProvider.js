@@ -1,21 +1,21 @@
 import React, { useState, useContext } from 'react';
 
-export const UserContext = React.createContext({});
+export const FeedContext = React.createContext({});
 
-export const useIsUserConnected = () => {
+export const useIsFeedIsConnected = () => {
 	//! Hook à utiliser pour donner des droits à un user
-	const { user } = useContext(UserContext);
-	return user !== false;
+	const { feed } = useContext(FeedContext);
+	return feed === true;
 };
 
-export default function UserProvider(props) {
-	const [user, setUser] = useState(false);
+export default function FeedProvider(props) {
+	const [feed, Buttonprofile] = useState(true);
 
-	console.log(user);
+	console.log(feed);
 
 	return (
-		<UserContext.Provider value={{ user, setUser }}>
+		<FeedContext.Provider value={{ feed, Buttonprofile }}>
 			{props.children}
-		</UserContext.Provider>
+		</FeedContext.Provider>
 	);
 }
