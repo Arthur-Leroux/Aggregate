@@ -7,7 +7,7 @@ export default function Home() {
 	return (
 		<>
 			<h1>Welcome Home</h1>
-			<h2>welcome {user.username}</h2>
+			<h2>welcome {user.email}</h2>
 		</>
 	);
 }
