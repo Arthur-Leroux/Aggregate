@@ -16,17 +16,17 @@ input:focus {
 }
 
 .register_input_name {
-  background: url(../../assets/pictures/name.svg) no-repeat;
+  background: url(../assets/pictures/name.svg) no-repeat;
   background-size: 25px;
   background-position: right;
 }
 .register_input_email {
-  background: url(../../assets/pictures/mails.svg) no-repeat;
+  background: url(../assets/pictures/mails.svg) no-repeat;
   background-size: 25px;
   background-position: right;
 }
 .register_input_password {
-  background: url(../../assets/pictures/password.svg) no-repeat;
+  background: url(../assets/pictures/password.svg) no-repeat;
   background-size: 25px;
   background-position: right;
 }
@@ -38,6 +38,6 @@ button {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  background: url(../../assets/pictures/arrow.svg) no-repeat;
+  background: url(../assets/pictures/arrow.svg) no-repeat;
   background-size: 25px;
 }/*# sourceMappingURL=register.css.map */

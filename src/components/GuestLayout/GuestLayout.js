@@ -1,4 +1,5 @@
 import React from 'react';
+import "./guestLayout.css"
 
 export default function GuestLayout(props) {
 	return (
