@@ -1,6 +1,19 @@
 .form {
+   border: 1px solid black;
+   display :flex;
+   flex-direction: column;
+
+   
    
 }
 .form_title {
     font-family: "Righteous", serif;
+    cursor: pointer;
+    
+    background:-webkit-linear-gradient(269deg, #4158D0 0%, #C850C0 100%, #FFCC70 46%);
+    background-clip:text;
+    -webkit-background-clip:text;
+    color:transparent;
+    transition: width 0.25s ease-out;
+   
 }

@@ -1,24 +1,34 @@
 import React,{ useState } from 'react';
 //import { UserContext } from '../FeedProvider/FeedProvider'
 import axios from 'axios';
-
+import Buttonprofile from '../Buttonprofile/Buttonprofile'
 //Import css
 import './leftmenu.css'
 
 export default function Leftmenu() {
 
-  const [search, setSearch] = useState('');
+  //const [search, setSearch] = useState('');
   //const { SetSearch } = useContext(UserContext);
-  const [myProfile, setMyProfile] = useState([])
+  const [myProfile, setMyProfile] = useState("")
 
-  function handleClick(event){
+  const handleClick =(event) =>{
     event.preventDefault();
-   console.log(handleClick)
+    return(
+      
+          console.log(Buttonprofile)
+    )
+   
+  
+    
+    
+   
   }
+    
+  
   
   axios({
     method: 'get',
-    url: `https://jsonplaceholder.typicode.com/users/`, //TODO: Remplacer cette adresse par celle du Back
+   // url: `https://jsonplaceholder.typicode.com/users/`, //TODO: Remplacer cette adresse par celle du Back
     params: { },
   })
     .then((response) => {
@@ -30,15 +40,14 @@ export default function Leftmenu() {
     });
 
   return (
-    <div>
-    <form className='form'>
+    <div className='form'>
+    <form >
       <input 
       type ="search" 
       placeholder='Search' 
-      value ={search}
-      onChange={(e) => {
-        setSearch(e.target.value);
-      }}
+     // value ={search}
+     
+      
       ></input>
       </form>
       <h2 className='form_title' onClick={handleClick} value={myProfile} onChange={(e)=>{
