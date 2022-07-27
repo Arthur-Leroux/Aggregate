@@ -13,14 +13,14 @@ export default function Login() {
 
 	const handleSubmitGet = (event) => {
 		event.preventDefault();
-		console.log({ email, password}); // => changement de userName en password pour la page login
+		console.log({ email, password }); // => changement de userName en password pour la page login
 
 		setUser({ email, password }); // => changement de userName en password pour la page login
 
 		axios({
 			method: 'get',
 			url: `https://jsonplaceholder.typicode.com/users/`, //TODO: Remplacer cette adresse par celle du Back
-			params: { password, email: email }, // => changement de userName en password pour la page login 
+			params: { email, password }, // => changement de userName en password pour la page login
 		})
 			.then((response) => {
 				console.log('response :', response);
@@ -45,12 +45,12 @@ export default function Login() {
 					}}
 				></input>
 				<input
-					className='section_input_username'
-					type='Password'  // => changement de userName en password pour la page login
-					placeholder='Password'   // => changement de userName en password pour la page login
-					value={password}  // => changement de userName en password pour la page login
+					className='section_input_password'
+					type='password' // => changement de userName en password pour la page login
+					placeholder='password' // => changement de userName en password pour la page login
+					value={password} // => changement de userName en password pour la page login
 					onChange={(event) => {
-						setPassword(event.target.value);  // => changement de userName en password pour la page login
+						setPassword(event.target.value); // => changement de userName en password pour la page login
 					}}
 				></input>
 
