@@ -1,6 +1,7 @@
 import React, { useRef, useContext } from 'react';
 import './Header.css';
 import logo from '../assets/pictures/logo1.png';
+import avatar from '../assets/pictures/avatar.png';
 import Snackbar from '../Snackbar/Snackbar';
 import { UserContext } from '../UserProvider/UserProvider';
 
@@ -18,6 +19,7 @@ export default function Header() {
 			<img src={logo} alt='logo' className='logo' />
 			<h1 className='container_title_main'>Aggregate</h1>
 			<div className='snackbar'>
+				<img src={avatar} alt='avatar' className='container_avatar' />
 				<div className='container_user_credentials'>
 					{user.email}
 					{user.picture}
