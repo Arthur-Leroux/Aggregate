@@ -65,6 +65,7 @@
 }
 
 .container_avatar {
+	align-items: center;
 	width: 100px;
 	cursor: pointer;
 	transition: 0.2s linear;

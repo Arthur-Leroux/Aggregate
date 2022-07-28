@@ -1,13 +1,17 @@
 import React from 'react';
-import Header from '../Header/Header';
-import LeftMenu from '../Leftmenu/Leftmenu';
+
+import Header from "../Header/Header";
+import Leftmenu from '../Leftmenu/Leftmenu';
 
 export default function AuthenticatedLayout(props) {
 	return (
-		<>
-			<Header />
-			<LeftMenu />
-			<div className='logged_user'>{props.children}</div>
-		</>
-	);
-}
+		<div className='logged_app'>
+		<Header />
+		<Leftmenu />
+		{props.children}
+		</div>
+		
+	)
+	
+
+	}

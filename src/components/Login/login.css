@@ -1,10 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&display=swap');
+
 .section_input_email {
-  background: url(../assets/pictures/mails.svg) no-repeat;
-  background-size: 25px;
-  background-position: right;
+	background: url(../assets/pictures/mails.svg) no-repeat;
+	background-size: 25px;
+	background-position: right;
 }
 .section_input_password {
-  background: url(../assets/pictures/password.svg) no-repeat;
-  background-size: 25px;
-  background-position: right;
-}/*# sourceMappingURL=login.css.map */
+	background: url(../assets/pictures/password.svg) no-repeat;
+	background-size: 25px;
+	background-position: right;
+} /*# sourceMappingURL=login.css.map */
+
+button {
+	transition: 0.2s linear;
+}
+
+button:hover {
+	transition: 0.2s linear;
+	color: antiquewhite;
+}
+
+.redirect_user {
+	display: grid;
+	place-items: center;
+}
+
+.redirect_user_question {
+	font-family: 'Edu TAS Beginner', cursive;
+	font-size: 1.5rem;
+}
+
+.redirect_user_link {
+	font-family: 'Edu TAS Beginner', cursive;
+	font-size: 1.5rem;
+	background-image: linear-gradient(
+		43deg,
+		#4158d0 0%,
+		#c850c0 46%,
+		#dd9000 100%
+	);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
+}

@@ -7,9 +7,7 @@ export default function GuestLayout(props) {
 			<h1 className='App_title_main'>
 				<strong>Aggregate</strong>
 			</h1>
-
 			<h2 className='App_subtitle'>devs' favorite spot</h2>
-
 			{props.children}
 		</div>
 	);

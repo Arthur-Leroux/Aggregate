@@ -1,6 +1,26 @@
 .form {
-   
+	background-color: rgb(222, 222, 222);
+	width: 17rem;
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 1;
+	grid-auto-rows: 100px;
 }
 .form_title {
-    font-family: "Righteous", serif;
+	font-family: 'Righteous', serif;
+	cursor: pointer;
+	background: -webkit-linear-gradient(
+		269deg,
+		#4158d0 0%,
+		#c850c0 100%,
+		#ffcc70 46%
+	);
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+	transition: width 0.25s ease-out;
+}
+
+.form_search {
+	width: 16rem;
 }

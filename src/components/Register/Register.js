@@ -16,7 +16,7 @@ export default function Register() {
 			url: '/', //! A modifier en fonction du back
 			method: 'POST',
 			baseURL: process.env.REACT_APP_API_URL,
-			data: { email, firstname: name, password }, //! Attention au firstName ou firstname
+			data: { email, password }, //! Attention au firstName ou firstname
 		})
 			.then((response) => {
 				console.log('response :', response);
@@ -30,18 +30,18 @@ export default function Register() {
 		<section className='register_section'>
 			<form onSubmit={handleSubmitPost} className='register_form'>
 				<input
-					className='register_input_name'
+					className='register_input_email'
 					type='text'
-					placeholder='Name'
+					placeholder='Email'
 					value={name}
 					onChange={(event) => {
 						setName(event.target.value);
 					}}
 				/>
 				<input
-					className='register_input_email'
-					type='email'
-					placeholder='Email'
+					className='register_input_password'
+					type='password'
+					placeholder='Password'
 					value={email}
 					onChange={(event) => {
 						setEmail(event.target.value);
@@ -50,7 +50,7 @@ export default function Register() {
 				<input
 					className='register_input_password'
 					type='password'
-					placeholder='Password'
+					placeholder='Confirm your password'
 					value={password}
 					onChange={(event) => {
 						setPassword(event.target.value);
