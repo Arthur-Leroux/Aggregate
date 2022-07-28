@@ -8,9 +8,8 @@
 	height: 60px;
 	border-radius: 8px;
 	display: grid;
-	align-items: center;
-	text-align: center;
-	justify-items: end;
+	align-content: stretch;
+	justify-items: center;
 }
 
 .snackbar .symbol {
@@ -18,8 +17,7 @@
 }
 
 .snackbar .message {
-	flex: 80%;
-	text-align: start;
+	text-align: center;
 	font-weight: bold;
 }
 
@@ -54,7 +52,10 @@
 }
 
 .showSnackbarBttn {
+	margin: 0;
+	padding: 0;
 	display: inline-block;
+	padding-top: 0.5rem;
 	padding-bottom: 0.05rem;
 	position: relative;
 	border: none;

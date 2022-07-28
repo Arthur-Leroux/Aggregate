@@ -1,0 +1,12 @@
+.profile {
+  background-color: lightgray;
+  margin-left: 20px;
+  margin-top: 10px;
+  border-radius: 20px;
+}
+.profile_title {
+  text-align: center;
+}
+.profile_input_picture {
+  padding-top: 3rem;
+}/*# sourceMappingURL=profile.css.map */
