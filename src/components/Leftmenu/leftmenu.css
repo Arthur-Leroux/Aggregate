@@ -5,6 +5,8 @@
 	display: grid;
 	grid-template-columns: 1;
 	grid-auto-rows: 100px;
+	justify-content: center;
+	align-items: center;
 }
 .form_title {
 	font-family: 'Righteous', serif;

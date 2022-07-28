@@ -14,7 +14,7 @@ export default function Leftmenu() {
 
 	const handleClick = (event) => {
 		event.preventDefault();
-		return console.log(Buttonprofile);
+		return console.log(Buttonprofile());
 	};
 
 	return (
