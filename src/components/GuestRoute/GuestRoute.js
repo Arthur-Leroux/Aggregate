@@ -11,7 +11,7 @@ export default function GuestRoute() {
 	const isUserConnected = useIsUserConnected();
 
 	if (isUserConnected) {
-		console.log('Tu dois etre déco pour accéder à cette route, redirection');
+		console.log('You must be logged out to access this page');
 
 		return <Navigate to='/' />;
 	}

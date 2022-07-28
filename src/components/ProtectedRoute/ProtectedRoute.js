@@ -10,7 +10,7 @@ export default function AuthenticatedRoute() {
 	const isUserConnected = useIsUserConnected();
 
 	if (!isUserConnected) {
-		console.log("T'as pas le droit, redirection");
+		alert('Sorry, you are not allowed');
 
 		return <Navigate to='/login' />;
 	}

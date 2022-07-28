@@ -1,5 +1,6 @@
 //import { render } from '@testing-library/react';
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import Buttonprofile from '../Buttonprofile/Buttonprofile';
 //import { FeedContext } from '../FeedProvider/FeedProvider'
 
@@ -27,24 +28,17 @@ export default function Leftmenu() {
 					// value ={search}
 				></input>
 			</form>
-			<h2
-				className='form_title'
-				onClick={handleClick}
-				value={myProfile}
-				onChange={(e) => {
-					setMyProfile(e.target.value);
-				}}
-			>
+			<NavLink to='/profile' className='form_profile'>
 				My profile
-			</h2>
+			</NavLink>
 
-			<h2 className='form_title' onClick={handleClick}>
+			<NavLink to='/jobs' className='form_profile'>
 				My Jobs
-			</h2>
+			</NavLink>
 
-			<h2 className='form_title' onClick={handleClick}>
+			<NavLink to='/friends' className='form_profile'>
 				My Friends
-			</h2>
+			</NavLink>
 		</div>
 	);
 }
