@@ -15,12 +15,12 @@ export default function Header() {
 	const { user } = useContext(UserContext);
 
 	return (
-		<section className='container'>
+		<section className='header'>
 			<img src={logo} alt='logo' className='logo' />
-			<h1 className='container_title_main'>Aggregate</h1>
+			<h1 className='header_title_main'>Aggregate</h1>
 			<div className='snackbar'>
-				<img src={avatar} alt='avatar' className='container_avatar' />
-				<div className='container_user_credentials'>
+				<img src={avatar} alt='avatar' className='header_avatar' />
+				<div className='header_user_credentials'>
 					{user.email}
 					{user.picture}
 				</div>

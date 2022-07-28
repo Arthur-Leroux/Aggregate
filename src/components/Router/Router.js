@@ -1,10 +1,16 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+//~ Components :
+
 import AuthenticatedRoute from '../AuthenticatedRoute/AuthenticatedRoute';
 import GuestRoute from '../GuestRoute/GuestRoute';
 import Register from '../Register/Register';
 import Login from '../Login';
+
+//~ Pages :
+
 import Home from '../../Pages/Home';
 import Profile from '../../Pages/Profile';
 import Jobs from '../../Pages/Jobs';

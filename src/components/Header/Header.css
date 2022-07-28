@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Righteous);
 
-.container {
+.header {
 	display: grid;
 	grid-template-rows: auto;
 	grid-template-columns: 15rem auto auto auto;
@@ -38,7 +38,7 @@
 	transform: rotate(90deg);
 }
 
-.container_title_main {
+.header_title_main {
 	justify-self: center;
 	cursor: pointer;
 	background-image: linear-gradient(
@@ -55,7 +55,7 @@
 	filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
 }
 
-.container_user_credentials {
+.header_user_credentials {
 	display: grid;
 }
 
@@ -64,14 +64,14 @@
 	justify-self: right;
 }
 
-.container_avatar {
+.header_avatar {
 	align-items: center;
 	width: 100px;
 	cursor: pointer;
 	transition: 0.2s linear;
 }
 
-.container_avatar:hover {
+.header_avatar:hover {
 	transition: 0.2s linear;
 	filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
 }
