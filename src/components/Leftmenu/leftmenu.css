@@ -1,13 +1,17 @@
 .form {
 	background-color: rgb(222, 222, 222);
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
 	width: 17rem;
 	height: 100vh;
-	display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+	display: grid;
+	grid-auto-rows: 100px;
 	border-radius: 20px;
-	margin: 10px;
+	align-content: top;
+	justify-content: center;
+	align-items: start;
+	justify-items: center;
 }
 .form_profile {
 	font-family: 'Righteous', serif;
