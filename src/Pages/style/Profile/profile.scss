@@ -35,11 +35,7 @@
     text-align: center;
   }
   &_birthday {
-
-  }
-  &_label_bd{
     text-align: center;
-    margin-top: 2rem;
   }
   &_email{
     text-align: center;
@@ -47,6 +43,8 @@
   &_password{
     text-align: center;
   }
-  
+  &_password_confirm{
+    text-align: center;
+  }
   
 }
