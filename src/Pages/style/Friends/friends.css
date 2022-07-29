@@ -1,20 +1,11 @@
 .container_friends {
 	display: flex;
-<<<<<<< HEAD:src/Pages/style/friends.css
 	flex-direction: column;
 flex-wrap: wrap;
 background-color: #bbbbbb;
 margin: 10px;
 border: 1px solid #bbbbbb;
 border-radius: 20px;
-=======
-	flex-wrap: wrap;
-	background-color: #bbbbbb;
-	margin: 10px;
-	border: 1px solid #bbbbbb;
-	border-radius: 20px;
-	margin-left: 20px;
->>>>>>> e83e9db52962b6bd70262e1eded1d5677e967f2b:src/Pages/style/Friends/friends.css
 }
 
 .children_friends {
@@ -22,14 +13,9 @@ border-radius: 20px;
 	flex-direction: column;
 	text-align: center;
 }
-<<<<<<< HEAD:src/Pages/style/friends.css
 .children_children_friends{
 	
 	border-radius: 20px;
-=======
-.children_children_friends {
-	border-radius: 10px;
->>>>>>> e83e9db52962b6bd70262e1eded1d5677e967f2b:src/Pages/style/Friends/friends.css
 	border-bottom: 0em;
 	margin: 5px;
 	padding: 15px;
