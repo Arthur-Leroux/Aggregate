@@ -1,0 +1,13 @@
+.profile {
+  background-color: lightgray;
+  margin-left: 20px;
+  margin-top: 10px;
+  border-radius: 20px;
+  &_title {
+    text-align: center;
+  }
+  &_input_picture {
+    padding-top: 3rem;
+  }
+  
+}

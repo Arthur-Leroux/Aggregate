@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&display=swap');
-
 input {
 	font-family: 'Edu TAS Beginner', cursive;
 	font-size: 18px;
@@ -41,10 +40,4 @@ button {
 	cursor: pointer;
 	background: url(../assets/pictures/arrow.svg) no-repeat;
 	background-size: 25px;
-	transition: 0.2s linear;
 } /*# sourceMappingURL=register.css.map */
-
-button:hover {
-	transition: 0.2s linear;
-	color: antiquewhite;
-}

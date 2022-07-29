@@ -1,8 +1,9 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 // Import css
-import "./style/friends.css";
+import './style/Friends/friends.css';
 export default function Friends() {
+
   return (
     <div className="container_friends">
       
@@ -18,5 +19,5 @@ export default function Friends() {
       
     </div>
   );
-}
+  }
 //!sur les navlink recuéperer l'id du profil cliquer 
