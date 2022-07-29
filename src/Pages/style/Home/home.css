@@ -3,6 +3,10 @@
   background-image: url("../../../components/assets/pictures/back.svg");
   background: cover repeat;
   padding: 5rem;
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-right: 10px;
+  border-radius: 20px;
 }
 .home_blur {
   height: 100vh;
