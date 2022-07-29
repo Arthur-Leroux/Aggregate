@@ -1,0 +1,33 @@
+.form {
+	background-color: rgb(222, 222, 222);
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	width: 17rem;
+	height: 100vh;
+	display: grid;
+	grid-auto-rows: 100px;
+	border-radius: 20px;
+	align-content: top;
+	justify-content: center;
+	align-items: start;
+	justify-items: center;
+}
+.form_profile {
+	font-family: 'Righteous', serif;
+	cursor: pointer;
+	background: -webkit-linear-gradient(
+		269deg,
+		#4158d0 0%,
+		#c850c0 100%,
+		#ffcc70 46%
+	);
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+	transition: width 0.25s ease-out;
+}
+
+.form_search {
+	width: 16rem;
+}

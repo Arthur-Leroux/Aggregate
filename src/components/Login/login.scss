@@ -1,0 +1,12 @@
+.section_input{
+  &_email{
+  background: url(../../assets/pictures/mails.svg) no-repeat;
+  background-size: 25px;
+  background-position: right;
+  }
+  &_password{
+  background: url(../../assets/pictures/password.svg) no-repeat;
+  background-size: 25px;
+  background-position: right;
+  }
+}

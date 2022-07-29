@@ -1,0 +1,19 @@
+.home {
+	text-align: center;
+	background-image: url('../../../components/assets/pictures/back.svg');
+	background: cover repeat;
+	padding: 5rem;
+	margin-left: 20px;
+	margin-top: 10px;
+	margin-right: 10px;
+	border-radius: 20px;
+}
+.home_blur {
+	height: 100vh;
+	background: rgba(255, 255, 255, 0.25);
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+	backdrop-filter: blur(7.5px);
+	-webkit-backdrop-filter: blur(7.5px);
+	border-radius: 10px;
+	border: 1px solid rgba(255, 255, 255, 0.18);
+} /*# sourceMappingURL=home.css.map */

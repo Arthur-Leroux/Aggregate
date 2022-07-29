@@ -1,87 +1,72 @@
-import React, { useState } from "react";
-//import propTypes from 'prop-types';
-//import css
-//import propTypes from 'prop-types';
+import React, { useState, useContext } from 'react';
+import { Navigate } from 'react-router-dom';
 import './login.css';
+import axios from 'axios';
+import { UserContext } from '../UserProvider/UserProvider';
 
-// function Login({valueEmail,valuePassword}) {
-//   return (
-//     <section className="section">
-//       <form className="section__from">
-//         <input
-//           className="section__input"
-//           type="text"
-//           placeholder="Email"
-//           value={valueEmail}>
-//         </input>
-//         <input
-//           className="input"
-//           type="Password"
-//           placeholder="Password"
-//           value={valuePassword}>
-//         </input>
-        
-//         <button>Login</button>
-//         <button>Register</button>
-//       </form>
-//     </section>
-//   );
-// }
-// Login.propTypes = {
-//   valueEmail: propTypes.string.isRequired,
-//   valuePassword : propTypes.string.isRequired,
-  
-// }
+export default function Login() {
+	const [email, setEmail] = useState('');
 
+	const [password, setPassword] = useState('');
 
-const Login = (props) =>{
+	const { setUser } = useContext(UserContext);
 
+	const handleSubmitGet = (event) => {
+		event.preventDefault();
+		console.log({ email, password });
 
+		setUser({ email, password });
 
-    const [newEmail, setnewEmail] = useState("");
+		axios({
+			method: 'get',
+			url: `https://jsonplaceholder.typicode.com/users/`, //TODO: Remplacer cette adresse par celle du Back
+			params: { email, password },
+		})
+			.then((response) => {
+				console.log('response :', response);
+				//TODO: setUser({ email, password });
+			})
+			.catch((error) => {
+				console.log('error :', error);
+				setUser(false);
+			});
+	};
 
-    const [newPassword, setnewPasword] = useState("");
+	return (
+		<>
+			<section className='section'>
+				<form onSubmit={handleSubmitGet} className='section_from'>
+					<input
+						className='section_input_email'
+						type='email'
+						placeholder='Email'
+						value={email}
+						onChange={(event) => {
+							setEmail(event.target.value);
+						}}
+					></input>
+					<input
+						className='section_input_password'
+						type='password'
+						placeholder='Password'
+						value={password}
+						onChange={(event) => {
+							setPassword(event.target.value);
+						}}
+					></input>
 
-
-
-
- const handleSubmit = event =>{
-  event.preventDefault();
-  //appel API pour se connecter.
-
-};
-
-
-
-
-return (
-      <section className="section">
-        <form onSubmit={handleSubmit} className="section__from">
-          <input
-            className="section__input"
-            type="text"
-            placeholder="Email"
-            value={newEmail}
-            onChange={event => 
-            {setnewEmail(event.target.value)}}>
-          </input>
-          <input
-            className="input"
-            type="Password"
-            placeholder="Password"
-            value={newPassword}
-            onChange={event => 
-            {setnewPasword(event.target.value)}}>
-          </input>
-          
-          <button>Login</button>
-          <button>Register</button>
-        </form>
-      </section>
-    );
-  }
-
-
-
-
-export default Login;
+					<button>Login</button>
+				</form>
+			</section>
+			<div className='redirect_user'>
+				<span className='redirect_user_question'>Not a member yet ?</span>
+				<span
+					className='redirect_user_link'
+					onClick={<Navigate to='/register' />}
+				>
+					Click here to register
+				</span>
+			</div>
+		</>
+	);
+}

@@ -1,0 +1,30 @@
+.container_friends {
+	display: flex;
+	flex-direction: column;
+flex-wrap: wrap;
+background-color: #bbbbbb;
+margin: 10px;
+border: 1px solid #bbbbbb;
+border-radius: 20px;
+}
+
+.children_friends {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+.children_children_friends{
+	
+	border-radius: 20px;
+	border-bottom: 0em;
+	margin: 5px;
+	padding: 15px;
+	color: black;
+	font-family: 'Righteous', serif;
+	background: -webkit-linear-gradient(
+		269deg,
+		#4158d0 0%,
+		#c850c0 100%,
+		#ffcc70 46%
+	);
+}

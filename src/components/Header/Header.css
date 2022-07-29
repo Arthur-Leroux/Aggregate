@@ -1,0 +1,78 @@
+@import url(https://fonts.googleapis.com/css?family=Righteous);
+
+.header {
+	display: grid;
+	grid-template-rows: auto auto 3;
+	grid-template-columns: 15rem auto auto;
+	background-color: #bbbbbb;
+}
+
+.logo {
+	padding-left: 0.5rem;
+	padding-top: 0.5rem;
+	filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
+	transition: 0.3s ease-in;
+	animation: hithere 2s ease 2;
+}
+
+@keyframes hithere {
+	30% {
+		transform: scale(1.2);
+	}
+	40%,
+	60% {
+		transform: rotate(-20deg) scale(1.2);
+	}
+	50% {
+		transform: rotate(20deg) scale(1.2);
+	}
+	70% {
+		transform: rotate(0deg) scale(1.2);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+.logo:hover {
+	transform: rotate(90deg);
+}
+
+.header_title_main {
+	justify-self: center;
+	cursor: pointer;
+	background-image: linear-gradient(
+		43deg,
+		#4158d0 0%,
+		#c850c0 46%,
+		#ffcc70 100%
+	);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-family: 'Righteous', serif;
+	font-size: 5em;
+	filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
+}
+
+.header_user_credentials {
+	display: grid;
+	padding-top: 0.5rem;
+}
+
+.snackbar {
+	max-width: fit-content;
+	justify-self: right;
+}
+
+.header_avatar {
+	align-items: center;
+	width: 100px;
+	cursor: pointer;
+	transition: 0.2s linear;
+}
+
+.header_avatar:hover {
+	transition: 0.2s linear;
+	filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
+}
