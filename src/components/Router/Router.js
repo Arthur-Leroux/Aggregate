@@ -1,11 +1,20 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+//~ Components :
+
 import AuthenticatedRoute from '../AuthenticatedRoute/AuthenticatedRoute';
 import GuestRoute from '../GuestRoute/GuestRoute';
 import Register from '../Register/Register';
 import Login from '../Login';
+
+//~ Pages :
+
 import Home from '../../Pages/Home';
+import Profile from '../../Pages/Profile';
+import Jobs from '../../Pages/Jobs';
+import Friends from '../../Pages/Friends';
 
 export default function Router() {
 	return (
@@ -20,7 +29,9 @@ export default function Router() {
 				<Route element={<AuthenticatedRoute />}>
 					{/* Ici les routes réservées aux utilisateurs connectés */}
 					<Route exact path='/' element={<Home />} />
-					{/* <Route exact path='/profile' element={<Profile />} /> */}
+					<Route exact path='/profile' element={<Profile />} />
+					<Route exact path='/jobs' element={<Jobs />} />
+					<Route exact path='/friends' element={<Friends />} />
 				</Route>
 
 				{/* Ici, les routes accessibles peu importe si on est connecté ou pas  */}

@@ -1,13 +1,18 @@
 import React from 'react';
+
 import Header from '../Header/Header';
-import LeftMenu from '../Leftmenu/Leftmenu';
+import Leftmenu from '../Leftmenu/Leftmenu';
+
+import './layout.css';
 
 export default function AuthenticatedLayout(props) {
 	return (
-		<>
+		<div className='logged_app'>
 			<Header />
-			<LeftMenu />
-			<div className='logged_user'>{props.children}</div>
-		</>
+			<div className='main'>
+				<Leftmenu />
+				{props.children}
+			</div>
+		</div>
 	);
 }

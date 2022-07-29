@@ -11,7 +11,7 @@ export default function ProtectedRoute() {
 	const isUserConnected = useIsUserConnected();
 
 	if (!isUserConnected) {
-		console.log("T'as pas le droit, redirection");
+		alert('Sorry, you must be logged to access this part');
 
 		return <Navigate to='/login' />;
 	}
