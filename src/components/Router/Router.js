@@ -15,6 +15,7 @@ import Home from '../../Pages/Home';
 import Profile from '../../Pages/Profile';
 import Jobs from '../../Pages/Jobs';
 import Friends from '../../Pages/Friends';
+import NotFound from '../../Pages/NotFound';
 
 export default function Router() {
 	return (
@@ -24,6 +25,7 @@ export default function Router() {
 					{/* Ici, les routes réservées aux utilisateurs pas connectés */}
 					<Route path='/login' element={<Login />} />
 					<Route path='/register' element={<Register />} />
+					<Route path='*' element={<NotFound />} />
 				</Route>
 
 				<Route element={<AuthenticatedRoute />}>
@@ -32,7 +34,10 @@ export default function Router() {
 					<Route exact path='/profile' element={<Profile />} />
 					<Route exact path='/jobs' element={<Jobs />} />
 					<Route exact path='/friends' element={<Friends />} />
+					<Route exact path='*' element={<NotFound />} />
 				</Route>
+
+				<Route path='*' element={<NotFound />} />
 
 				{/* Ici, les routes accessibles peu importe si on est connecté ou pas  */}
 				{/* <Route ....... /> */}

@@ -26,6 +26,11 @@ export default function Profile() {
 						min='1900-06-10'
 						max='2020-01-01'
 					></input>
+					<input
+						className='profile_job'
+						type='text'
+						placeholder='My current job'
+					></input>
 					<button className='profile_btn' type='submit'>
 						Send
 					</button>

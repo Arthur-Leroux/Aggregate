@@ -31,19 +31,29 @@
 .profile_firstname {
   margin-top: 4rem;
   text-align: center;
+  color: black;
 }
 .profile_name {
   text-align: center;
+  color: black;
 }
 .profile_birthday {
   text-align: center;
+  color: black;
+}
+.profile_job {
+  text-align: center;
+  color: black;
 }
 .profile_email {
   text-align: center;
+  color: black;
 }
 .profile_password {
   text-align: center;
+  color: black;
 }
 .profile_password_confirm {
   text-align: center;
+  color: black;
 }/*# sourceMappingURL=profile.css.map */
