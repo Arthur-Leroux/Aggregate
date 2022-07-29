@@ -3,11 +3,50 @@
   margin-left: 20px;
   margin-top: 10px;
   border-radius: 20px;
+  &_left{
+    width: 50%;
+    display: grid;
+    place-items: center;
+    float: left;
+  }
+  &_right {
+    width: 50%;
+    display: grid;
+    place-items: center;
+    margin-top: 4rem;
+    float: right;
+  }
+  &_frame {
+    border: 1px solid black;
+    align-items: center;
+  }
   &_title {
     text-align: center;
+    padding-bottom: 5rem;
   }
   &_input_picture {
     padding-top: 3rem;
   }
+  &_firstname {
+    margin-top: 4rem;
+    text-align: center;
+  }
+  &_name {
+    text-align: center;
+  }
+  &_birthday {
+
+  }
+  &_label_bd{
+    text-align: center;
+    margin-top: 2rem;
+  }
+  &_email{
+    text-align: center;
+  }
+  &_password{
+    text-align: center;
+  }
+  
   
 }

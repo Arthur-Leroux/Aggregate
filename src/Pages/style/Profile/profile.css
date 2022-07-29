@@ -4,9 +4,44 @@
   margin-top: 10px;
   border-radius: 20px;
 }
+.profile_left {
+  width: 50%;
+  display: grid;
+  place-items: center;
+  float: left;
+}
+.profile_right {
+  width: 50%;
+  display: grid;
+  place-items: center;
+  margin-top: 4rem;
+  float: right;
+}
+.profile_frame {
+  border: 1px solid black;
+  align-items: center;
+}
 .profile_title {
   text-align: center;
+  padding-bottom: 5rem;
 }
 .profile_input_picture {
   padding-top: 3rem;
+}
+.profile_firstname {
+  margin-top: 4rem;
+  text-align: center;
+}
+.profile_name {
+  text-align: center;
+}
+.profile_label_bd {
+  text-align: center;
+  margin-top: 2rem;
+}
+.profile_email {
+  text-align: center;
+}
+.profile_password {
+  text-align: center;
 }/*# sourceMappingURL=profile.css.map */
