@@ -5,7 +5,7 @@ import "./style/friends.css";
 export default function Friends() {
   return (
     <div className="container_friends">
-      <ul className="children_friends">
+      
         <NavLink to="/profile" className="children_children_friends">MR boloré</NavLink>
         <NavLink to="/profile" className="children_children_friends">Patrick Balkani</NavLink>
         <NavLink to="/profile" className="children_children_friends">Isabelle Balkani</NavLink>
@@ -15,7 +15,8 @@ export default function Friends() {
         <NavLink to="/profile" className="children_children_friends">Obiwan Kenobi</NavLink>
         <NavLink to="/profile" className="children_children_friends">Emmanuel Macron</NavLink>
         <NavLink to="/profile" className="children_children_friends">Brigitte Bardo</NavLink>
-      </ul>
+      
     </div>
   );
 }
+//!sur les navlink recuéperer l'id du profil cliquer 
