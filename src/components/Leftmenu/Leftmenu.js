@@ -21,9 +21,7 @@ export default function Leftmenu() {
 				My profile
 			</NavLink>
 
-			<NavLink to='/jobs' className='form_profile'>
-				My Jobs
-			</NavLink>
+			
 
 			<NavLink to='/friends' className='form_profile'>
 				My Friends
