@@ -14,7 +14,9 @@ border-radius: 20px;
 	text-align: center;
 }
 .children_children_friends{
-	
+	display: flex;
+    align-items: center;
+
 	border-radius: 20px;
 	border-bottom: 0em;
 	margin: 5px;
