@@ -6,12 +6,10 @@
 	width: 17rem;
 	height: 100vh;
 	display: grid;
-	grid-auto-rows: 100px;
-	border-radius: 20px;
-	align-content: top;
-	justify-content: center;
-	align-items: start;
-	justify-items: center;
+	border-radius: 30px;
+	margin: 10px;
+	
+	
 }
 .form_profile {
 	font-family: 'Righteous', serif;
