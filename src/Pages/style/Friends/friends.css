@@ -1,6 +1,6 @@
 .container_friends {
 display: grid;
-
+max-height: 30em;
 background-color: #bbbbbb;
 margin: 10px;
 border: 1px solid #bbbbbb;

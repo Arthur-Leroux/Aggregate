@@ -8,10 +8,15 @@
 	display: grid;
 	border-radius: 30px;
 	margin: 10px;
-	
+	justify-content: center;
+	align-items: center;
+	max-height: 19em;
 	
 }
 .form_profile {
+	align-items: center;
+    display: grid;
+    justify-content: center;
 	font-family: 'Righteous', serif;
 	cursor: pointer;
 	background: -webkit-linear-gradient(
@@ -28,4 +33,8 @@
 
 .form_search {
 	width: 16rem;
+	width: 16rem;
+    display: grid;
+    align-items: center;
+    justify-content: center;
 }
