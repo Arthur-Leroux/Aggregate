@@ -30,23 +30,31 @@
   &_firstname {
     margin-top: 4rem;
     text-align: center;
+    color: black;
   }
   &_name {
     text-align: center;
+    color: black;
   }
   &_birthday {
-
-  }
-  &_label_bd{
     text-align: center;
-    margin-top: 2rem;
+    color: black;
+  }
+  &_job{
+    text-align: center;
+    color: black;
   }
   &_email{
     text-align: center;
+    color: black;
   }
   &_password{
     text-align: center;
+    color: black;
   }
-  
+  &_password_confirm{
+    text-align: center;
+    color: black;
+  }
   
 }

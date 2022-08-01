@@ -1,10 +1,10 @@
 .section_input_email {
-	background: url(../assets/pictures/mails.svg) no-repeat;
-	background-size: 25px;
-	background-position: right;
+  background: url(../assets/pictures/mails.svg) no-repeat;
+  background-size: 25px;
+  background-position: right;
 }
 .section_input_password {
-	background: url(../assets/pictures/password.svg) no-repeat;
-	background-size: 25px;
-	background-position: right;
-} /*# sourceMappingURL=login.css.map */
+  background: url(../assets/pictures/password.svg) no-repeat;
+  background-size: 25px;
+  background-position: right;
+}/*# sourceMappingURL=login.css.map */
