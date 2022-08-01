@@ -13,7 +13,7 @@ import Login from '../Login';
 
 import Home from '../../Pages/Home';
 import Profile from '../../Pages/Profile';
-import Jobs from '../../Pages/Jobs';
+
 import Friends from '../../Pages/Friends';
 
 export default function Router() {
@@ -30,7 +30,7 @@ export default function Router() {
 					{/* Ici les routes réservées aux utilisateurs connectés */}
 					<Route exact path='/' element={<Home />} />
 					<Route exact path='/profile' element={<Profile />} />
-					<Route exact path='/jobs' element={<Jobs />} />
+					
 					<Route exact path='/friends' element={<Friends />} />
 				</Route>
 
