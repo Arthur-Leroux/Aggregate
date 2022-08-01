@@ -1,21 +1,21 @@
 .container_friends {
 display: grid;
-max-height: 30em;
+height: 100vh;
 background-color: #bbbbbb;
 margin: 10px;
 border: 1px solid #bbbbbb;
 border-radius: 20px;
+width: 300px;
+
+overflow-y: scroll;
+scrollbar-color: rebeccapurple green;
+scrollbar-width: thin;
+
 }
 
-.children_friends {
-	display: grid;
 
-	
-}
 .children_children_friends{
 	display: grid;
-   
-
 	border-radius: 20px;
 	border-bottom: 0em;
 	margin: 5px;
