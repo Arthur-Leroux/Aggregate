@@ -76,11 +76,12 @@
 	transition: 0.2s linear;
 	filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
 }
+
 @media screen and (max-width:650px) {
 	.header{
 		background-color: #bbbbbb;
 		justify-content: flex-start;
-		display: grid;
+		display: block;
 		
 	}
 	
@@ -103,6 +104,13 @@
 }
 
 
+@media screen and (max-width:650px){
+	.header_avatar{
+		display:grid;
+	
+		
+	}
+}
 @media screen and (max-width:650px){
 	.header_avatar{
 		display:grid;
