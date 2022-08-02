@@ -16,8 +16,8 @@ export default function Friends() {
         <NavLink to="/profile" className="children_children_friends"><img className="profiles-img" src={pictures} alt=""/>Isabelle Balkani</NavLink>
         <NavLink to="/profile" className="children_children_friends"><img className="profiles-img" src={pictures} alt=""/>Carlos Ghosn</NavLink>
         <NavLink to="/profile" className="children_children_friends"><img className="profiles-img" src={pictures} alt=""/>Harry Potter</NavLink>
-        <NavLink to="/profile" className="children_children_friends"><img className="profiles-img" src={pictures} alt=""/>Agrid chez plus son nom</NavLink>
-        <NavLink to="/profile" className="children_children_friends"><img className="profiles-img" src={pictures} alt=""/>Obiwan Kenobi</NavLink>
+        <NavLink to="/profile" className="children_children_friends"><img className="profiles-img" src={pictures} alt=""/>Hagrid chez plus son nom</NavLink>
+        <NavLink to="/profile" className="children_children_friends"><img className="profiles-img" src={pictures} alt=""/>Obi-Wan Kenobi</NavLink>
         <NavLink to="/profile" className="children_children_friends"><img className="profiles-img" src={pictures} alt=""/>Emmanuel Macron</NavLink>
         <NavLink to="/profile" className="children_children_friends"><img className="profiles-img" src={pictures} alt=""/>Brigitte Bardo</NavLink>
         
