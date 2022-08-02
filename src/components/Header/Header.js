@@ -19,7 +19,7 @@ export default function Header() {
 			<img src={logo} alt='logo' className='logo' />
 			<h1 a href='/' className='header_title_main'>
 				Aggregate
-			</h1>
+				</h1>
 			<div className='snackbar'>
 				<img src={avatar} alt='avatar' className='header_avatar' />
 				<div className='header_user_credentials'>
