@@ -1,3 +1,4 @@
+import React from 'react';
 import './style/Feed/feed.css';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import CommentIcon from '@mui/icons-material/Comment';
@@ -28,11 +29,16 @@ export default function Feed() {
 										</div>
 									</div>
 									<div className='homeCenter'>
-										<img
-											className='postImg'
-											src={user.photo}
-											alt='userpic'
-										></img>
+										{user.photo === null ? (
+											user.desc
+										) : (
+											<img
+												className='postImg'
+												src={user.photo}
+												alt='userpic'
+											></img>
+										)}
+
 										<div className='subtext'>
 											<SubdirectoryArrowRightIcon />
 											<p className='img_label'>{user.desc}</p>
@@ -43,8 +49,7 @@ export default function Feed() {
 										<div className='home_post_buttons'>
 											<FavoriteIcon className='likeIcon' />
 											<span className='postLikeCounter'>{user.like}</span>
-										</div>
-										<div className='home_post_comments'>
+
 											<CommentIcon className='commentIcon' />
 											<PersonAddIcon className='addIcon' />
 										</div>
@@ -55,7 +60,6 @@ export default function Feed() {
 					})}
 				</div>
 			</div>
-			;
 		</>
 	);
 }

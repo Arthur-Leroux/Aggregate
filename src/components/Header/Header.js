@@ -1,5 +1,6 @@
 import React, { useRef, useContext } from 'react';
 import './Header.css';
+import ReactSwitch from 'react-switch';
 import logo from '../assets/pictures/logo1.png';
 import avatar from '../assets/pictures/avatar.png';
 import Snackbar from '../Snackbar/Snackbar';
@@ -19,6 +20,9 @@ export default function Header() {
 			<h1 className='header_title_main' alt='hearder title' rel='noreferrer'>
 				Aggregate
 			</h1>
+			<div className='darkmode_toggle'>
+				<ReactSwitch />
+			</div>
 			<div className='snackbar'>
 				<img src={avatar} alt='avatar' className='header_avatar' />
 				<div className='header_user_credentials'>

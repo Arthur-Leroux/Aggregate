@@ -6,7 +6,7 @@ export default [
 		desc: 'On en parle des punaises de lit ???',
 		content:
 			"Quand je dors, j'ai des trucs qui me piquent, c'est bizarre, quelqu'un a une solution ? Merci",
-		photo: 'https://images.pexels.com/photos/9743015/pexels-photo-9743015.jpeg',
+		photo: 'https://images.pexels.com/photos/9742971/pexels-photo-9742971.jpeg',
 		date: 'Il y a deux semaines',
 		userId: '1',
 		like: '89',
@@ -33,8 +33,7 @@ export default [
 		desc: "J'aime pas le back-end, tuez-moi !!!",
 		content:
 			"Alors, c'est très simple, je HAIS le back, je le fight à trois heures du matin, j'y comprends rien, sauvez moi de cette misère svp",
-		photo:
-			'https://www.pexels.com/fr-fr/photo/ordinateur-portable-noir-et-gris-546819/',
+		photo: null,
 		date: 'Il y a trois secondes',
 		userId: '3',
 		like: '851',
