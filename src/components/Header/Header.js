@@ -57,7 +57,7 @@ export default function Header() {
 					type={SnackbarType.success}
 				/>
 			</div>
-			</div>
+		
 		</section>
 	);
 }
