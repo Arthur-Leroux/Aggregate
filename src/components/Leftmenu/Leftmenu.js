@@ -14,7 +14,7 @@ export default function Leftmenu() {
 					placeholder='Search'
 				></input>
 			</form>
-			<NavLink to='/feed' className='form_profile'>
+			<NavLink to='/' className='form_profile'>
 				My Feed
 			</NavLink>
 			<NavLink to='/profile' className='form_profile'>

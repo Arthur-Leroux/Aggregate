@@ -29,7 +29,7 @@ export default function Router() {
 
 				<Route element={<AuthenticatedRoute />}>
 					{/* Ici les routes réservées aux utilisateurs connectés */}
-					<Route exact path='/feed' element={<Feed />} />
+					<Route exact path='/' element={<Feed />} />
 					<Route exact path='/profile' element={<Profile />} />
 					<Route exact path='/friends' element={<Friends />} />
 					<Route exact path='*' element={<NotFound />} />

@@ -1,8 +1,13 @@
 import React from 'react';
 import './style/NotFound/NotFound.css';
 import { NavLink } from 'react-router-dom';
+import { useIsUserConnected } from '../components/UserProvider/UserProvider';
 
 export default function NotFound() {
+	const isUserConnected = useIsUserConnected();
+
+	const redirectTo = isUserConnected ? '/' : '/login';
+
 	return (
 		<div>
 			<div className='stars'>
@@ -15,9 +20,8 @@ export default function NotFound() {
 						alt='central_image'
 					/>
 					<NavLink
-						to='/'
+						to={redirectTo}
 						className='btn-go-home'
-						target='_blank'
 						alt='button_home'
 						rel='noreferrer'
 					>
