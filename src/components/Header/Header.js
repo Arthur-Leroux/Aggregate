@@ -36,6 +36,7 @@ export default function Header() {
 					<ModeNightIcon className='dark_icon' />
 				</span>
 			</div>
+
 			<div className='snackbar'>
 				<img src={avatar} alt='avatar' className='header_avatar' />
 				<div className='header_user_credentials'>
@@ -55,6 +56,7 @@ export default function Header() {
 					message='User successfully disconnected !'
 					type={SnackbarType.success}
 				/>
+			</div>
 			</div>
 		</section>
 	);

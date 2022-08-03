@@ -142,3 +142,45 @@
 #dark .dark_icon {
 	color: #4158d0;
 }
+
+@media screen and (max-width:650px) {
+	.header{
+		background-color: #bbbbbb;
+		justify-content: flex-start;
+		display: block;
+		
+	}
+	
+}
+@media screen and (max-width:650px){
+	.snackbar{
+		display:grid;
+		justify-content: center;
+		justify-items: center;
+
+	}
+}
+@media screen and (max-width:650px){
+	.header_title_main{
+		display:none;
+		justify-content: center;
+		justify-items: center;
+		
+	}
+}
+
+
+@media screen and (max-width:650px){
+	.header_avatar{
+		display:grid;
+	
+		
+	}
+}
+@media screen and (max-width:650px){
+	.header_avatar{
+		display:grid;
+	
+		
+	}
+}
