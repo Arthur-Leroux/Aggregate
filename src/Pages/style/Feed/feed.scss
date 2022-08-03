@@ -1,0 +1,157 @@
+.home {
+  background-color: lightgray;
+  background: cover repeat;
+  padding: 3rem;
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-right: 10px;
+  border-radius: 20px;
+
+  &_blur {
+    padding-top: 2rem;
+    height: 100vh;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 7.5px );
+    -webkit-backdrop-filter: blur( 7.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    overflow-y: scroll;
+  }
+  &_blur::-webkit-scrollbar {
+    width: 5px;
+  }
+  &_blur::-webkit-scrollbar-thumb {
+    background: rgb(255, 145, 0); 
+  }
+  &_post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &_user{
+    display: flex;
+    align-items: center;
+  }
+  &_post_buttons{
+    display: flex;
+    align-items: center;
+    }
+  &_post-comments {
+    padding-left: 45px;
+  }
+}
+
+.homeTop{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profile{
+  &_img{
+    width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: 0.5s;
+  }
+  &_img:hover{
+    transform: scale(1.5);
+    transition: 0.5s;
+  }
+  &_name{
+      font-size: 15px;
+      font-weight: 500;
+      margin: 0 10px;
+      color: black;
+    }
+  &_post_comments{
+    
+  }
+}
+
+
+.post_date{
+font-size: 12px;
+}
+
+.likeIcon{
+  padding-right: 15px;
+  width: 20px !important;
+  height: 20px !important;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+.likeIcon:hover{
+  color: rgb(245, 2, 172);
+}
+
+.thumbsUp{
+  padding-right: 5px;
+  width: 20px !important;
+  height: 20px !important;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+.thumbsUp:hover{
+  color: #1a02f5;
+}
+
+
+.postLikeCounter{
+  font-size: 15px;
+  padding-right: 3rem;
+}
+
+.homeCenter{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.postImg{
+  margin-top: 20px;
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+}
+
+.homeBottom{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 4rem;
+}
+
+.postText{
+  padding-top: 2rem;
+}
+
+.commentIcon{
+  margin-right: 3rem;
+}
+.commentIcon:hover{
+  color: #1a02f5;
+  cursor: pointer;
+}
+.addIcon:hover{
+  color: rgb(0, 172, 0);
+  cursor: pointer;
+}
+
+.img_label{
+  background-color: #ebebeb;
+
+}
+.subtext{
+  display: flex;
+  align-items: center;
+}
+
+.container{
+  border-bottom: 3px dashed hsl(27, 100%, 66%);
+  padding-top: 3rem;
+}

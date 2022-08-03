@@ -13,7 +13,7 @@ export default function GuestRoute() {
 	if (isUserConnected) {
 		console.log('You must be logged out to access this page');
 
-		return <Navigate to='/' />;
+		return <Navigate to='/feed' />;
 	}
 
 	return (

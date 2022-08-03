@@ -13,11 +13,10 @@ export default function Header() {
 	const snackbarRef = useRef(null);
 
 	const { user } = useContext(UserContext);
-
 	return (
 		<section className='header'>
 			<img src={logo} alt='logo' className='logo' />
-			<h1 a href='/' className='header_title_main'>
+			<h1 className='header_title_main' alt='hearder title' rel='noreferrer'>
 				Aggregate
 			</h1>
 			<div className='snackbar'>

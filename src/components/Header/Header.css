@@ -5,6 +5,9 @@
 	grid-template-rows: auto auto 3;
 	grid-template-columns: 15rem auto auto;
 	background-color: #bbbbbb;
+	border-radius: 0px 0px 25px 25px;
+	-webkit-border-radius: 0px 0px 25px 25px;
+	-moz-border-radius: 0px 0px 25px 25px;
 }
 
 .logo {
