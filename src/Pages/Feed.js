@@ -1,18 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './style/Feed/feed.css';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import CommentIcon from '@mui/icons-material/Comment';
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
 import SubdirectoryArrowRightIcon from '@mui/icons-material/SubdirectoryArrowRight';
-
-import data from '../components/assets/data/dummyData';
+import { ArticlesContext } from "../components/ArticlesProvider/ArticlesProvider";
 
 export default function Feed() {
-	return (
+    const { articles } = useContext(ArticlesContext);
+
+    return (
 		<>
 			<div className='home'>
 				<div className='home_blur'>
-					{data.map((user) => {
+					{articles.map((user) => {
 						return (
 							<div key={user.id} className='container'>
 								<div className='home_post'>
@@ -39,27 +40,27 @@ export default function Feed() {
 											></img>
 										)}
 
-										<div className='subtext'>
-											<SubdirectoryArrowRightIcon />
-											<p className='img_label'>{user.desc}</p>
-										</div>
-										<span className='postText'>{user.description}</span>
-									</div>
-									<div className='homeBottom'>
-										<div className='home_post_buttons'>
-											<FavoriteIcon className='likeIcon' />
-											<span className='postLikeCounter'>{user.like}</span>
+                                        <div className='subtext'>
+                                            <SubdirectoryArrowRightIcon />
+                                            <p className='img_label'>{user.desc}</p>
+                                        </div>
+                                        <span className='postText'>{user.description}</span>
+                                    </div>
+                                    <div className='homeBottom'>
+                                        <div className='home_post_buttons'>
+                                            <FavoriteIcon className='likeIcon' />
+                                            <span className='postLikeCounter'>{user.like}</span>
 
-											<CommentIcon className='commentIcon' />
-											<PersonAddIcon className='addIcon' />
-										</div>
-									</div>
-								</div>
-							</div>
-						);
-					})}
-				</div>
-			</div>
-		</>
-	);
+                                            <CommentIcon className='commentIcon' />
+                                            <PersonAddIcon className='addIcon' />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        );
+                    })}
+                </div>
+            </div>
+        </>
+    );
 }
