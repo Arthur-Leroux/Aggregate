@@ -72,6 +72,11 @@
 	transition: color 0.2s;
 }
 
+#dark .showSnackbarBttn:hover {
+	color: blue;
+	transition: color 0.2s;
+}
+
 .showSnackbarBttn::before {
 	content: '';
 	position: absolute;

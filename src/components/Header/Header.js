@@ -3,6 +3,8 @@ import './Header.css';
 import ReactSwitch from 'react-switch';
 import logo from '../assets/pictures/logo1.png';
 import avatar from '../assets/pictures/avatar.png';
+import LightbulbIcon from '@mui/icons-material/Lightbulb';
+import ModeNightIcon from '@mui/icons-material/ModeNight';
 import Snackbar from '../Snackbar/Snackbar';
 import { UserContext } from '../UserProvider/UserProvider';
 import { ThemeContext } from '../AuthenticatedLayout/AuthenticatedLayout';
@@ -24,7 +26,15 @@ export default function Header() {
 				Aggregate
 			</h1>
 			<div className='darkmode_toggle'>
+				<span className='darkmode_toggle_light'>
+					<LightbulbIcon className='light_icon' />
+					Light
+				</span>
 				<ReactSwitch checked={theme === 'light'} onChange={toggleTheme} />
+				<span className='darkmode_toggle_dark'>
+					Dark
+					<ModeNightIcon className='dark_icon' />
+				</span>
 			</div>
 			<div className='snackbar'>
 				<img src={avatar} alt='avatar' className='header_avatar' />
