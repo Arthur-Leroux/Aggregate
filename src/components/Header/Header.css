@@ -4,7 +4,20 @@
 	display: grid;
 	grid-template-rows: auto auto 3;
 	grid-template-columns: 15rem auto auto;
+
+	border-radius: 0px 0px 25px 25px;
+	-webkit-border-radius: 0px 0px 25px 25px;
+	-moz-border-radius: 0px 0px 25px 25px;
+}
+
+#light .header {
+	transition: background-color 1s;
 	background-color: #bbbbbb;
+}
+
+#dark .header {
+	transition: background-color 1s;
+	background-color: rgb(47, 47, 47);
 }
 
 .logo {
@@ -52,7 +65,16 @@
 	-webkit-text-fill-color: transparent;
 	font-family: 'Righteous', serif;
 	font-size: 5em;
+}
+
+#light .header_title_main {
+	transition: filter 2s;
 	filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
+}
+
+#dark .header_title_main {
+	transition: filter 2s;
+	filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(122, 122, 122, 0.5));
 }
 
 .header_user_credentials {
@@ -60,9 +82,17 @@
 	padding-top: 0.5rem;
 }
 
+#dark .header_user_credentials {
+	color: azure;
+}
+
 .snackbar {
 	max-width: fit-content;
 	justify-self: right;
+}
+
+#dark .showSnackbarBttn {
+	color: #c850c0;
 }
 
 .header_avatar {
@@ -74,7 +104,43 @@
 
 .header_avatar:hover {
 	transition: 0.2s linear;
-	filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
+}
+
+.darkmode_toggle {
+	display: grid;
+	grid-template-columns: auto;
+	height: 100%;
+	width: 30%;
+	align-content: center;
+	justify-content: center;
+}
+
+.darkmode_toggle_light {
+	text-align: center;
+	padding-bottom: 1rem;
+}
+.darkmode_toggle_dark {
+	text-align: center;
+	padding-top: 1rem;
+	color: azure;
+}
+
+#light .darkmode_toggle_dark {
+	transition: color 2s;
+	color: transparent;
+}
+
+#dark .darkmode_toggle_light {
+	transition: color 2s;
+	color: transparent;
+}
+
+#light .light_icon {
+	color: rgb(255, 255, 177);
+}
+
+#dark .dark_icon {
+	color: #4158d0;
 }
 
 @media screen and (max-width:650px) {

@@ -1,5 +1,4 @@
 .form {
-	background-color: rgb(222, 222, 222);
 	margin-top: 10px;
 	margin-left: 10px;
 	margin-bottom: 10px;
@@ -12,6 +11,16 @@
 	align-items: center;
 
 	
+}
+
+#light .form {
+	transition: background-color 1s;
+	background-color: rgb(222, 222, 222);
+}
+
+#dark .form {
+	transition: background-color 1s;
+	background-color: rgb(47, 47, 47);
 }
 .form_profile {
 	align-items: center;
@@ -33,8 +42,10 @@
 
 .form_search {
 	width: 16rem;
-	width: 16rem;
-    display: grid;
-    align-items: center;
-    justify-content: center;
+	text-align: center;
+	color: black;
+}
+
+#dark .form_search {
+	color: azure;
 }
