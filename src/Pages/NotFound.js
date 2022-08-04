@@ -1,32 +1,17 @@
 import React from 'react';
 import './style/NotFound/NotFound.css';
+import { NavLink } from 'react-router-dom';
+import { useIsUserConnected } from '../components/UserProvider/UserProvider';
 
 export default function NotFound() {
+	const isUserConnected = useIsUserConnected();
+
+	const redirectTo = isUserConnected ? '/' : '/login';
+
 	return (
-		<body className='bg-purple'>
+		<div>
 			<div className='stars'>
-				<div className='custom-navbar'>
-					<div className='brand-logo'>
-						<img
-							src='http://salehriaz.com/404Page/img/logo.svg'
-							width='80px'
-							alt='logo'
-						/>
-					</div>
-					<div className='navbar-links'>
-						<ul>
-							<li>
-								<a
-									href='http://salehriaz.com/404Page/404.html'
-									target='_blank'
-									rel='noreferrer'
-								>
-									Home
-								</a>
-							</li>
-						</ul>
-					</div>
-				</div>
+				<div className='custom-navbar'></div>
 				<div className='central-body'>
 					<img
 						className='image-404'
@@ -34,15 +19,14 @@ export default function NotFound() {
 						width='300px'
 						alt='central_image'
 					/>
-					<a
-						href='http://salehriaz.com/404Page/404.html'
+					<NavLink
+						to={redirectTo}
 						className='btn-go-home'
-						target='_blank'
 						alt='button_home'
 						rel='noreferrer'
 					>
 						GO BACK HOME
-					</a>
+					</NavLink>
 				</div>
 				<div className='objects'>
 					<img
@@ -82,6 +66,6 @@ export default function NotFound() {
 					<div className='star'></div>
 				</div>
 			</div>
-		</body>
+		</div>
 	);
 }

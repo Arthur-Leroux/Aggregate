@@ -11,9 +11,8 @@ import Login from '../Login';
 
 //~ Pages :
 
-import Home from '../../Pages/Home';
+import Feed from '../../Pages/Feed';
 import Profile from '../../Pages/Profile';
-
 import Friends from '../../Pages/Friends';
 import NotFound from '../../Pages/NotFound';
 
@@ -30,14 +29,11 @@ export default function Router() {
 
 				<Route element={<AuthenticatedRoute />}>
 					{/* Ici les routes réservées aux utilisateurs connectés */}
-					<Route exact path='/' element={<Home />} />
+					<Route exact path='/' element={<Feed />} />
 					<Route exact path='/profile' element={<Profile />} />
-					
 					<Route exact path='/friends' element={<Friends />} />
 					<Route exact path='*' element={<NotFound />} />
 				</Route>
-
-				<Route path='*' element={<NotFound />} />
 
 				{/* Ici, les routes accessibles peu importe si on est connecté ou pas  */}
 				{/* <Route ....... /> */}

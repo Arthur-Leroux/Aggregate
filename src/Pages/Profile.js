@@ -19,6 +19,7 @@ export default function Profile() {
 						type='text'
 						placeholder='Name'
 					></input>
+
 					<input
 						className='profile_birthday'
 						type='date'
