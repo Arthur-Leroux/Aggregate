@@ -5,12 +5,12 @@
 	width: 17rem;
 	height: 100vh;
 	display: grid;
-	grid-auto-rows: 100px;
-	border-radius: 20px;
-	align-content: top;
+	border-radius: 30px;
+	margin: 10px;
 	justify-content: center;
-	align-items: start;
-	justify-items: center;
+	align-items: center;
+	max-height: 19em;
+	
 }
 
 #light .form {
@@ -23,6 +23,9 @@
 	background-color: rgb(47, 47, 47);
 }
 .form_profile {
+	align-items: center;
+    display: grid;
+    justify-content: center;
 	font-family: 'Righteous', serif;
 	cursor: pointer;
 	background: -webkit-linear-gradient(
