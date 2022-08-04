@@ -8,6 +8,9 @@
   border-radius: 20px;
 }
 .home_blur {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding-top: 2rem;
   height: 100vh;
   background: rgba(255, 255, 255, 0.25);
@@ -93,6 +96,12 @@
   color: rgb(245, 2, 172);
 }
 
+.likeIcon--liked {
+  transition: all 0.2s ease-in-out;
+  color: rgb(245, 2, 172);
+  cursor: pointer;
+}
+
 .thumbsUp {
   padding-right: 5px;
   width: 20px !important;
@@ -145,7 +154,18 @@
   cursor: pointer;
 }
 
+.addIcon {
+  transition: all 0.2s ease-in-out;
+}
+
 .addIcon:hover {
+  color: rgb(0, 172, 0);
+  cursor: pointer;
+}
+
+.addIcon--friend {
+  transform: scale(1.4);
+  transition: all 0.2s ease-in-out;
   color: rgb(0, 172, 0);
   cursor: pointer;
 }
@@ -192,4 +212,34 @@
   font-size: 15px;
   margin-left: -2.5rem;
   padding-right: 3rem;
+}
+
+.user_post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50vw;
+  height: 40vh;
+  border: 1px solid black;
+}
+.user_post_message {
+  text-align: center;
+  color: black;
+}
+
+.user_post_form {
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+.user_post_form_submit_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.5rem;
+}
+
+.picUploader {
+  padding: 1rem;
 }/*# sourceMappingURL=feed.css.map */

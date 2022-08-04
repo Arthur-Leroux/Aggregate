@@ -11,7 +11,7 @@ export default [
 		date: 'Il y a deux semaines',
 		userId: '1',
 		like: 89,
-		comment: 60,
+		comments: 60,
 	},
 	{
 		id: 2,
@@ -24,7 +24,7 @@ export default [
 		date: 'Il y a 15 minutes',
 		userId: 2,
 		like: 1002,
-		comment: 267,
+		comments: 267,
 	},
 	{
 		id: 3,
@@ -38,7 +38,7 @@ export default [
 		date: 'Il y a trois secondes',
 		userId: 3,
 		like: 851,
-		comment: 30,
+		comments: 30,
 	},
 	{
 		id: 4,
@@ -52,7 +52,7 @@ export default [
 		date: 'Il y a trois mois',
 		userId: 4,
 		like: 20,
-		comment: 3,
+		comments: 3,
 	},
 	{
 		id: 5,
@@ -66,7 +66,7 @@ export default [
 		date: 'Il y a cinq jours',
 		userId: 5,
 		like: 895,
-		comment: 500,
+		comments: 500,
 	},
 	{
 		id: 6,
@@ -79,6 +79,6 @@ export default [
 		date: 'Il y a une semaine',
 		userId: 6,
 		like: 50,
-		comment: 48,
+		comments: 48,
 	},
 ];
