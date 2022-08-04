@@ -3,23 +3,22 @@ import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import './fileinput.css';
 
-const FileInput = () => {
-	const [selectedImage, setSelectedImage] = useState(null);
+const FileInput = (props) => {
 	const [imageUrl, setImageUrl] = useState(null);
 
 	useEffect(() => {
-		if (selectedImage) {
-			setImageUrl(URL.createObjectURL(selectedImage));
+		if (props.value) {
+			setImageUrl(URL.createObjectURL(props.value));
 		}
-	}, [selectedImage]);
+	}, [props.value]);
 
 	return (
 		<>
 			<div className='profile_pic'>
-				{imageUrl && selectedImage && (
+				{imageUrl && props.value && (
 					<Box mt={2} textAlign='center'>
 						<div></div>
-						<img src={imageUrl} alt={selectedImage.name} height='100px' />
+						<img src={imageUrl} alt={props.value.name} height='100px' />
 					</Box>
 				)}
 				<input
@@ -27,7 +26,7 @@ const FileInput = () => {
 					type='file'
 					id='select-image'
 					style={{ display: 'none' }}
-					onChange={(e) => setSelectedImage(e.target.files[0])}
+					onChange={(e) => props.onChange(e.target.files[0])}
 				/>
 				<label className='upload_button' htmlFor='select-image'>
 					<Button variant='contained' color='primary' component='span'>
