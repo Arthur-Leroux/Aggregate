@@ -2,7 +2,7 @@
 import { v4 as uuidv4 } from 'uuid';
 import profilePicture from '../pictures/avatar.png';
 
-// Cet objet nous sert simuler la réponse que l'api nous enverrait après s'etre connecté
+// Cet objet nous sert simuler la réponse que l'api nous enverrait après un login réussi
 export default {
 	id: uuidv4(),
 	profilePicture: profilePicture,

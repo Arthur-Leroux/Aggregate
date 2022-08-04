@@ -15,8 +15,6 @@ export default function Feed() {
 
 	const { user } = useContext(UserContext);
 
-	console.log('CONNECTE AVEC USER:', user);
-
 	const [content, setContent] = useState('');
 	const [description, setDescription] = useState('');
 	const [selectedImage, setSelectedImage] = useState(null);
