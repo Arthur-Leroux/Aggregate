@@ -116,13 +116,21 @@
 }
 
 .darkmode_toggle_light {
+	display: flex;
 	text-align: center;
 	padding-bottom: 1rem;
+	align-content: center;
+	align-items: center;
 }
+
 .darkmode_toggle_dark {
+	padding-left: 5px;
+	display: flex;
 	text-align: center;
 	padding-top: 1rem;
 	color: azure;
+	align-content: center;
+	align-items: center;
 }
 
 #light .darkmode_toggle_dark {

@@ -1,13 +1,20 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import './style/Feed/feed.css';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import CommentIcon from '@mui/icons-material/Comment';
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
 import SubdirectoryArrowRightIcon from '@mui/icons-material/SubdirectoryArrowRight';
 import { ArticlesContext } from '../components/ArticlesProvider/ArticlesProvider';
+//import ArticlesProvider from '../components/ArticlesProvider/ArticlesProvider';
 
 export default function Feed() {
 	const { articles } = useContext(ArticlesContext);
+	const [like, setLike] = useState();
+	const [isLiked, setIsLiked] = useState(false);
+	const likeHandler = () => {
+		setLike(isLiked ? like - 1 : like + 1);
+		setIsLiked(!isLiked);
+	};
 
 	return (
 		<>
@@ -54,8 +61,10 @@ export default function Feed() {
 										<div className='home_post_buttons'>
 											<FavoriteIcon className='likeIcon' />
 											<span className='postLikeCounter'>{user.like}</span>
-
-											<CommentIcon className='commentIcon' />
+											<div className='comments'>
+												<CommentIcon className='commentIcon' />
+												<span className='commentCounter'>{user.comment}</span>
+											</div>
 											<PersonAddIcon className='addIcon' />
 										</div>
 									</div>

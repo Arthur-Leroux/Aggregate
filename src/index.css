@@ -6,6 +6,9 @@ body {
 	animation: gradient 15s ease infinite;
 	height: 100vh;
 }
+html {
+	scroll-behavior: smooth;
+}
 
 @keyframes gradient {
 	0% {
