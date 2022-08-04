@@ -5,11 +5,21 @@ import CommentIcon from '@mui/icons-material/Comment';
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
 import SubdirectoryArrowRightIcon from '@mui/icons-material/SubdirectoryArrowRight';
 import { ArticlesContext } from '../components/ArticlesProvider/ArticlesProvider';
-import ArticlesProvider from '../components/ArticlesProvider/ArticlesProvider';
 import FileInput from '../components/FileInput/FileInput';
+import { v4 as uuidv4 } from 'uuid';
+import { UserContext } from '../components/UserProvider/UserProvider';
+import fileToBase64 from '../utils/fileToBase64';
 
 export default function Feed() {
-	const { articles } = useContext(ArticlesContext);
+	const { articles, createArticle } = useContext(ArticlesContext);
+
+	const { user } = useContext(UserContext);
+
+	console.log('CONNECTE AVEC USER:', user);
+
+	const [content, setContent] = useState('');
+	const [description, setDescription] = useState('');
+	const [selectedImage, setSelectedImage] = useState(null);
 
 	const [isLiked, setIsLiked] = useState(false);
 	const likeHandler = () => {
@@ -21,28 +31,71 @@ export default function Feed() {
 		setIsFriend(!isFriend);
 	};
 
+	const postNewArticle = async (event) => {
+		event.preventDefault();
+
+		let imageBase64 = null;
+
+		if (selectedImage) {
+			imageBase64 = await fileToBase64(selectedImage);
+		}
+
+		const newArticle = {
+			id: uuidv4(),
+			userId: user.id,
+			username: `${user.firstname} ${user.name}`,
+			profilePicture: user.profilePicture,
+			desc: description,
+			content: content,
+			photo: imageBase64,
+			date: 'Il y a quelques secondes',
+			like: 0,
+			comments: 0,
+		};
+
+		createArticle(newArticle);
+	};
+
 	return (
 		<>
 			<div className='home'>
 				<div className='home_blur'>
 					<div className='user_post'>
-						<form className='user_post_form'>
+						<form className='user_post_form' onSubmit={postNewArticle}>
 							<input
 								className='user_post_message'
 								placeholder='Type your message'
+								name='content'
+								value={content}
+								onChange={(event) => {
+									setContent(event.target.value);
+								}}
 							></input>
+
 							<p>or</p>
+
 							<div className='picUploader'>
-								<FileInput />
+								<FileInput value={selectedImage} onChange={setSelectedImage} />
 							</div>
+
+							<input
+								className='user_post_message'
+								placeholder='Type your image description'
+								name='desc'
+								value={description}
+								onChange={(event) => {
+									setDescription(event.target.value);
+								}}
+							></input>
+
 							<button type='submit' className='user_post_form_submit_btn'>
 								SEND
 							</button>
 						</form>
 					</div>
-					{articles.map((user) => {
+					{articles.map((article) => {
 						return (
-							<div key={user.id} className='container'>
+							<div key={article.id} className='container'>
 								<div className='home_post'>
 									<div className='homeTop'>
 										<div className='home_user'>
@@ -50,34 +103,34 @@ export default function Feed() {
 											<img
 												className='profile_img'
 												alt='profile pic'
-												src={user.profilePicture}
+												src={article.profilePicture}
 											></img>
-											<span className='profile_name'>{user.username}</span>
-											<span className='post_date'>{user.date}</span>
+											<span className='profile_name'>{article.username}</span>
+											<span className='post_date'>{article.date}</span>
 										</div>
 									</div>
 									<div className='homeCenter'>
-										{user.photo === null ? (
+										{article.photo === null ? (
 											<p></p>
 										) : (
 											<img
 												className='postImg'
-												src={user.photo}
+												src={article.photo}
 												alt='userpic'
 											></img>
 										)}
 
 										<div className='subtext'>
 											<SubdirectoryArrowRightIcon />
-											{user.photo ? (
-												<p className='img_label'>{user.desc}</p>
+											{article.photo ? (
+												<p className='img_label'>{article.desc}</p>
 											) : (
 												<span className='post_without_pics'>
-													{user.content}
+													{article.content}
 												</span>
 											)}
 										</div>
-										<span className='postText'>{user.description}</span>
+										<span className='postText'>{article.description}</span>
 									</div>
 									<div className='homeBottom'>
 										<div className='home_post_buttons'>
@@ -85,10 +138,12 @@ export default function Feed() {
 												className={isLiked ? 'likeIcon--liked' : 'likeIcon'}
 												onClick={likeHandler}
 											/>
-											<span className='postLikeCounter'>{user.like}</span>
+											<span className='postLikeCounter'>{article.like}</span>
 											<div className='comments'>
 												<CommentIcon className='commentIcon' />
-												<span className='commentCounter'>{user.comments}</span>
+												<span className='commentCounter'>
+													{article.comments}
+												</span>
 											</div>
 											<PersonAddIcon
 												className={isFriend ? 'addIcon--friend' : 'addIcon'}
