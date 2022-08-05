@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 .home {
-  background: cover repeat;
-  padding: 3rem;
+  padding: 1rem;
   margin-left: 20px;
   margin-top: 10px;
   margin-right: 10px;
+  margin-bottom: 20px;
   border-radius: 20px;
 }
 .home_blur {
@@ -12,7 +12,9 @@
   flex-direction: column;
   align-items: center;
   padding-top: 2rem;
-  height: 100vh;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  height: 73vh;
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(7.5px);
@@ -216,20 +218,23 @@
 
 .user_post {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 50vw;
-  height: 40vh;
-  border: 1px solid black;
+  height: 60vh;
 }
-.user_post_message {
+.user_post_content {
+  text-align: center;
+  color: black;
+}
+.user_post_description {
   text-align: center;
   color: black;
 }
 
 .user_post_form {
   display: flex;
+  flex-direction: column;
   align-content: center;
   align-items: center;
 }

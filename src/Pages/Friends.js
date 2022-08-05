@@ -1,27 +1,42 @@
-
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-//import FileInput from '../components/FileInput/FileInput';
-import pictures from '../components/assets/pictures/avatar.png'
-// Import css
 import './style/Friends/friends.css';
-import './style/logo.css'
-export default function Friends() {
+import './style/logo.css';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import { CardActionArea } from '@mui/material';
+import users from '../components/assets/data/myFriends';
+import PersonAddIcon from '@mui/icons-material/PersonAdd';
 
-  return (
-    <div className="container_friends">
-      
-        <NavLink to="/profile" className="children_children_friends"><img className="profiles-img" src={pictures} alt=""/>MR boloré</NavLink>
-        <NavLink to="/profile" className="children_children_friends"><img className="profiles-img" src={pictures} alt=""/>Patrick Balkani</NavLink>
-        <NavLink to="/profile" className="children_children_friends"><img className="profiles-img" src={pictures} alt=""/>Isabelle Balkani</NavLink>
-        <NavLink to="/profile" className="children_children_friends"><img className="profiles-img" src={pictures} alt=""/>Carlos Ghosn</NavLink>
-        <NavLink to="/profile" className="children_children_friends"><img className="profiles-img" src={pictures} alt=""/>Harry Potter</NavLink>
-        <NavLink to="/profile" className="children_children_friends"><img className="profiles-img" src={pictures} alt=""/>Agrid chez plus son nom</NavLink>
-        <NavLink to="/profile" className="children_children_friends"><img className="profiles-img" src={pictures} alt=""/>Obiwan Kenobi</NavLink>
-        <NavLink to="/profile" className="children_children_friends"><img className="profiles-img" src={pictures} alt=""/>Emmanuel Macron</NavLink>
-        <NavLink to="/profile" className="children_children_friends"><img className="profiles-img" src={pictures} alt=""/>Brigitte Bardo</NavLink>
-        
-    </div>
-  );
-  }
-//!sur les navlink recuéperer l'id du profil cliquer 
+export default function Friends() {
+	return (
+		<>
+			<div className='container_friends'>
+				{users.map((user) => {
+					return (
+						<Card key={user.id} sx={{ maxWidth: 345 }}>
+							<CardActionArea>
+								<CardMedia
+									component='img'
+									height='140'
+									image={user.profilePicture}
+									alt='green iguana'
+								/>
+								<CardContent>
+									<Typography gutterBottom variant='h5' component='div'>
+										{user.username}
+										<PersonAddIcon className='friendTag' />
+									</Typography>
+									<Typography variant='body2' color='text.secondary'>
+										{user.desc}
+									</Typography>
+								</CardContent>
+							</CardActionArea>
+						</Card>
+					);
+				})}
+			</div>
+		</>
+	);
+}

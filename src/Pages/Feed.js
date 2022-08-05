@@ -61,7 +61,7 @@ export default function Feed() {
 					<div className='user_post'>
 						<form className='user_post_form' onSubmit={postNewArticle}>
 							<input
-								className='user_post_message'
+								className='user_post_content'
 								placeholder='Type your message'
 								name='content'
 								value={content}
@@ -77,7 +77,7 @@ export default function Feed() {
 							</div>
 
 							<input
-								className='user_post_message'
+								className='user_post_description'
 								placeholder='Type your image description'
 								name='desc'
 								value={description}

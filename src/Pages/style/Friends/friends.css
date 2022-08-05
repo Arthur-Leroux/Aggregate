@@ -1,31 +1,39 @@
 .container_friends {
-display: grid;
-height: 100vh;
-background-color: #bbbbbb;
-margin: 10px;
-border: 1px solid #bbbbbb;
-border-radius: 20px;
-width: 300px;
-
-overflow-y: scroll;
-scrollbar-color: rebeccapurple green;
-scrollbar-width: thin;
-
+	display: flex;
+	height: 75vh;
+	margin-left: 20px;
+	margin-top: 10px;
+	margin-right: 10px;
+	margin-bottom: 20px;
+	border-radius: 20px;
+	width: 84.3vw;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-content: space-around;
+	align-items: stretch;
+	justify-content: space-between;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
 }
 
+#dark .container_friends {
+	transition: background-color 1s;
+	background-color: rgb(47, 47, 47);
+}
 
-.children_children_friends{
-	display: grid;
-	border-radius: 20px;
-	border-bottom: 0em;
-	margin: 5px;
-	padding: 15px;
-	color: black;
-	font-family: 'Righteous', serif;
-	background: -webkit-linear-gradient(
-		269deg,
-		#4158d0 0%,
-		#c850c0 100%,
-		#ffcc70 46%
-	);
+#light .container_friends {
+	transition: background-color 1s;
+	background-color: #dedede;
+}
+
+.friendTag {
+	transition: all 0.2s ease-in-out;
+	padding-left: 3rem;
+	color: rgb(0, 172, 0);
+}
+
+.friendTag:hover {
+	transform: scale(1.4);
+	transition: all 0.2s ease-in-out;
+	cursor: pointer;
 }
