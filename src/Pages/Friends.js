@@ -7,35 +7,49 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import users from '../components/assets/data/myFriends';
-import PersonAddIcon from '@mui/icons-material/PersonAdd';
+import PersonRemoveIcon from '@mui/icons-material/PersonRemove';
 import { SearchContext } from '../components/SearchProvider/SearchProvider';
 
 export default function Friends() {
 	const [isFriend, setIsFriend] = useState(false);
+	const [friendsId, setFriendsId] = useState([1, 2, 3, 4]);
+
+	const { searchTerms } = useContext(SearchContext);
+
 	const friendHandler = () => {
 		setIsFriend(!isFriend);
 	};
-	const { searchTerms } = useContext(SearchContext);
+
+	const removeFriend = (friendToRemoveId) => {
+		setFriendsId(
+			friendsId.filter((friendId) => {
+				// Je garde l'ami seulement si son id n'est pas celui de l'ami que je dois supprimer
+				return friendToRemoveId !== friendId;
+			})
+		);
+	};
 
 	const filteredFriends = users.filter((user) => {
 		// Est-ce que la description/contenu ou username correspondent au terme recherché ?
-		const descriptionMatches = user.desc
-			.toLowerCase()
-			.includes();
+		const descriptionMatches = user.desc.toLowerCase().includes(searchTerms);
 		const contentMatches = user.content.toLowerCase().includes(searchTerms);
 		const usernameMatches = user.username.toLowerCase().includes(searchTerms);
 
-		return descriptionMatches || contentMatches || usernameMatches;
+		const isFriend = friendsId.includes(user.id);
+
+		return (
+			isFriend && (descriptionMatches || contentMatches || usernameMatches)
+		);
 	});
 
 	return (
 		<>
 			<div className='container_friends'>
-				{users.map((user) => {
+				{filteredFriends.map((user) => {
 					return (
 						<Card
 							key={user.id}
-							className={isFriend ? 'friend_card--hide' : 'friend_card'}
+							className='friend_card'
 							onClick={friendHandler}
 							sx={{ maxWidth: 345 }}
 						>
@@ -49,7 +63,10 @@ export default function Friends() {
 								<CardContent>
 									<Typography gutterBottom variant='h5' component='div'>
 										{user.username}
-										<PersonAddIcon className='friendTag' />
+										<PersonRemoveIcon
+											className='friendTag'
+											onClick={() => removeFriend(user.id)}
+										/>
 									</Typography>
 									<Typography variant='body2' color='text.secondary'>
 										{user.desc}
