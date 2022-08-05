@@ -81,13 +81,15 @@ export default function Profile() {
 								type='text'
 								placeholder='Add a bio'
 							></textarea>
+							<select name='gender' className='profile_gender'>
+								<option value='' selected disabled hidden>
+									My gender
+								</option>
+								<option value='man'>Man</option>
+								<option value='woman'>Woman</option>
+							</select>
 							<input
-								className='profile_job'
-								type='text'
-								placeholder='My current job'
-							></input>
-							<input
-								className='profile_adress'
+								className='profile_address'
 								type='text'
 								placeholder='Town, State, Country'
 							></input>

@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { Navigate } from 'react-router-dom';
+import { Navigate, NavLink } from 'react-router-dom';
 import './login.css';
 import axios from 'axios';
 import { UserContext } from '../UserProvider/UserProvider';
@@ -62,12 +62,7 @@ export default function Login() {
 			</section>
 			<div className='redirect_user'>
 				<span className='redirect_user_question'>Not a member yet ?</span>
-				<span
-					className='redirect_user_link'
-					onClick={<Navigate to='/register' />}
-				>
-					Click here to register
-				</span>
+				<NavLink to='/register'>Click here to register</NavLink>
 			</div>
 		</>
 	);

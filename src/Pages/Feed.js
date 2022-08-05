@@ -130,7 +130,7 @@ export default function Feed() {
 										</div>
 										<span className='postText'>{article.description}</span>
 									</div>
-									<div className='homeBottom'>
+									<div className='home_buttons'>
 										<div className='home_post_buttons'>
 											<FavoriteIcon
 												className={isLiked ? 'likeIcon--liked' : 'likeIcon'}

@@ -1,12 +1,15 @@
 .profile {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   display: flex;
   flex-direction: column;
   transition: background-color 1s;
   background-color: #dedede;
-  height: 78vh;
+  height: 76vh;
   margin-left: 20px;
   margin-right: 10px;
   margin-top: 10px;
+  margin-bottom: 10px;
   border-radius: 20px;
   overflow-y: scroll;
 }
@@ -22,10 +25,6 @@
   place-items: center;
   margin-top: 4rem;
   float: right;
-}
-.profile_frame {
-  border: 1px solid black;
-  align-items: center;
 }
 .profile_title {
   text-align: center;
@@ -60,6 +59,10 @@
   color: black;
 }
 .profile_password_confirm {
+  text-align: center;
+  color: black;
+}
+.profile_address {
   text-align: center;
   color: black;
 }

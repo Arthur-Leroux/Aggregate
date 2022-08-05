@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './style/Friends/friends.css';
 import './style/logo.css';
 import Card from '@mui/material/Card';
@@ -10,12 +10,21 @@ import users from '../components/assets/data/myFriends';
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
 
 export default function Friends() {
+	const [isFriend, setIsFriend] = useState(false);
+	const friendHandler = () => {
+		setIsFriend(!isFriend);
+	};
 	return (
 		<>
 			<div className='container_friends'>
 				{users.map((user) => {
 					return (
-						<Card key={user.id} sx={{ maxWidth: 345 }}>
+						<Card
+							key={user.id}
+							className={isFriend ? 'friend_card--hide' : 'friend_card'}
+							onClick={friendHandler}
+							sx={{ maxWidth: 345 }}
+						>
 							<CardActionArea>
 								<CardMedia
 									component='img'

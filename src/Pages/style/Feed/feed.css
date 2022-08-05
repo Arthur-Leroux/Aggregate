@@ -66,10 +66,16 @@
   transition: 0.5s;
 }
 .profile_name {
+  transition: color 1s;
   font-size: 15px;
   font-weight: 500;
   margin: 0 10px;
   color: black;
+}
+
+#dark .profile_name {
+  transition: color 1s;
+  color: azure;
 }
 
 #light .home {
@@ -83,7 +89,13 @@
 }
 
 .post_date {
+  transition: color 1s;
   font-size: 12px;
+}
+
+#dark .post_date {
+  transition: color 1s;
+  color: azure;
 }
 
 .likeIcon {
@@ -136,11 +148,17 @@
      object-fit: contain;
 }
 
-.homeBottom {
+.home_buttons {
+  transition: color 1s;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-bottom: 4rem;
+}
+
+#dark .home_buttons {
+  transition: color 1s;
+  color: lightgray;
 }
 
 .postText {
@@ -230,6 +248,17 @@
 .user_post_description {
   text-align: center;
   color: black;
+}
+
+#dark .user_post_content {
+  transition: color 1s;
+  color: azure;
+  font-weight: bolder;
+}
+#dark .user_post_description {
+  transition: color 1s;
+  color: azure;
+  font-weight: bolder;
 }
 
 .user_post_form {
