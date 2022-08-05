@@ -1,12 +1,12 @@
 .container_friends {
 	display: flex;
-	height: 75vh;
+	height: 75.5vh;
 	margin-left: 20px;
 	margin-top: 10px;
 	margin-right: 10px;
 	margin-bottom: 20px;
 	border-radius: 20px;
-	width: 84.3vw;
+	width: 87.5vw;
 	flex-direction: column;
 	flex-wrap: wrap;
 	align-content: space-around;

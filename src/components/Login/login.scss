@@ -10,3 +10,14 @@
   background-position: right;
   }
 }
+
+.redirect_user{
+  display: flex;
+  flex-direction: column;
+  &_question{
+    font-size: larger;
+  }
+  &_link{
+    font-size: larger;
+  }
+}

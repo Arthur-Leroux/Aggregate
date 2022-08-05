@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
+import { SearchContext } from '../SearchProvider/SearchProvider';
 
 //Import css
 import './leftmenu.css';
 
 export default function Leftmenu() {
+	const { searchTerms, setSearchTerms } = useContext(SearchContext);
+
 	return (
 		<div className='form'>
 			<form>
@@ -12,6 +15,10 @@ export default function Leftmenu() {
 					className='form_search'
 					type='search'
 					placeholder='Search'
+					value={searchTerms}
+					onChange={(event) => {
+						setSearchTerms(event.target.value);
+					}}
 				></input>
 			</form>
 			<NavLink to='/' className='form_profile'>

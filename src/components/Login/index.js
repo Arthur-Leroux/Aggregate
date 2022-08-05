@@ -56,13 +56,14 @@ export default function Login() {
 							setPassword(event.target.value);
 						}}
 					></input>
-
 					<button>Login</button>
 				</form>
 			</section>
 			<div className='redirect_user'>
 				<span className='redirect_user_question'>Not a member yet ?</span>
-				<NavLink to='/register'>Click here to register</NavLink>
+				<NavLink to='/register' className='redirect_user_link'>
+					Click here to register
+				</NavLink>
 			</div>
 		</>
 	);

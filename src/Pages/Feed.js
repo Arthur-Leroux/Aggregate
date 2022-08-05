@@ -9,12 +9,15 @@ import FileInput from '../components/FileInput/FileInput';
 import { v4 as uuidv4 } from 'uuid';
 import { UserContext } from '../components/UserProvider/UserProvider';
 import fileToBase64 from '../utils/fileToBase64';
+import { SearchContext } from '../components/SearchProvider/SearchProvider';
 
 export default function Feed() {
+	// Context
 	const { articles, createArticle } = useContext(ArticlesContext);
-
 	const { user } = useContext(UserContext);
+	const { searchTerms } = useContext(SearchContext);
 
+	// State
 	const [content, setContent] = useState('');
 	const [description, setDescription] = useState('');
 	const [selectedImage, setSelectedImage] = useState(null);
@@ -23,6 +26,23 @@ export default function Feed() {
 	const likeHandler = () => {
 		setIsLiked(!isLiked);
 	};
+
+	const lowerCaseSearchTerm = searchTerms.toLowerCase();
+
+	const filteredArticles = articles.filter((article) => {
+		// Est-ce que la description/contenu ou username correspondent au terme recherché ?
+		const descriptionMatches = article.desc
+			.toLowerCase()
+			.includes(lowerCaseSearchTerm);
+		const contentMatches = article.content
+			.toLowerCase()
+			.includes(lowerCaseSearchTerm);
+		const usernameMatches = article.username
+			.toLowerCase()
+			.includes(lowerCaseSearchTerm);
+
+		return descriptionMatches || contentMatches || usernameMatches;
+	});
 
 	const [isFriend, setIsFriend] = useState(false);
 	const friendHandler = () => {
@@ -91,7 +111,7 @@ export default function Feed() {
 							</button>
 						</form>
 					</div>
-					{articles.map((article) => {
+					{filteredArticles.map((article) => {
 						return (
 							<div key={article.id} className='container'>
 								<div className='home_post'>

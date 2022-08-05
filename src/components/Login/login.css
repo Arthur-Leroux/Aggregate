@@ -7,4 +7,15 @@
   background: url(../assets/pictures/password.svg) no-repeat;
   background-size: 25px;
   background-position: right;
+}
+
+.redirect_user {
+  display: flex;
+  flex-direction: column;
+}
+.redirect_user_question {
+  font-size: larger;
+}
+.redirect_user_link {
+  font-size: larger;
 }/*# sourceMappingURL=login.css.map */

@@ -17,7 +17,7 @@ export default function Header() {
 	const snackbarRef = useRef(null);
 
 	const { theme, toggleTheme } = useContext(ThemeContext);
-	const { user } = useContext(UserContext);
+	const { user, setUser } = useContext(UserContext);
 
 	return (
 		<section className='header'>
@@ -45,7 +45,7 @@ export default function Header() {
 				<button
 					className='showSnackbarBttn'
 					onClick={() => {
-						snackbarRef.current.show();
+						setUser(false);
 					}}
 				>
 					Log Out
