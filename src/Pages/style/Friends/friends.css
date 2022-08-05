@@ -12,7 +12,14 @@ scrollbar-color: rebeccapurple green;
 scrollbar-width: thin;
 
 }
-
+#dark .container_friends {
+	transition: background-color 1s;
+	background-color: rgb(47, 47, 47);
+}
+#light .container_friends {
+	transition: background-color 1s;
+	background-color: #bbbbbb;
+}
 
 .children_children_friends{
 	display: grid;

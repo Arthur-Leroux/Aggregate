@@ -2,8 +2,8 @@
 
 .header {
 	display: grid;
-	grid-template-rows: auto auto 3;
-	grid-template-columns: 15rem auto auto;
+	/* grid-template-rows: auto auto 3;
+	grid-template-columns: 15rem auto auto; */
 
 	border-radius: 0px 0px 25px 25px;
 	-webkit-border-radius: 0px 0px 25px 25px;
@@ -142,16 +142,17 @@
 #dark .dark_icon {
 	color: #4158d0;
 }
-
+/*
 @media screen and (max-width:650px) {
 	.header{
 		background-color: #bbbbbb;
 		justify-content: flex-start;
-		display: block;
+		display:grid;
 		
 	}
-	
 }
+	
+
 @media screen and (max-width:650px){
 	.snackbar{
 		display:grid;
@@ -159,28 +160,28 @@
 		justify-items: center;
 
 	}
-}
-@media screen and (max-width:650px){
+} 
+ @media screen and (max-width:650px){
 	.header_title_main{
-		display:none;
+		justify-self: center;
 		justify-content: center;
 		justify-items: center;
 		
 	}
-}
+} 
 
 
-@media screen and (max-width:650px){
+ @media screen and (max-width:650px){
 	.header_avatar{
 		display:grid;
 	
 		
 	}
-}
-@media screen and (max-width:650px){
+} 
+ @media screen and (max-width:650px){
 	.header_avatar{
 		display:grid;
 	
 		
 	}
-}
+}  */

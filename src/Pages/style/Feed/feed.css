@@ -70,6 +70,7 @@
 #light .home {
   transition: background-color 1s;
   background-color: lightgray;
+  color: azure;
 }
 
 #dark .home {
@@ -79,6 +80,7 @@
 
 .post_date {
   font-size: 12px;
+  color: black;
 }
 
 .likeIcon {
@@ -151,8 +153,14 @@
 }
 
 .img_label {
-  background-color: #ebebeb;
+/* background-color: #ebebeb; */
+  color: black;
 }
+#dark .img_label{
+  
+ color: azure;
+}
+
 
 .subtext {
   display: flex;
@@ -180,3 +188,6 @@
   font-family: "Bebas Neue", cursive;
   padding: 3rem;
 }/*# sourceMappingURL=feed.css.map */
+#dark .post_date{
+  color: azure;
+}

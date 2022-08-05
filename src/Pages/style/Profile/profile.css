@@ -5,6 +5,7 @@
   margin-top: 10px;
   border-radius: 20px;
 }
+
 .profile_left {
   width: 50%;
   display: grid;
@@ -58,3 +59,29 @@
   text-align: center;
   color: black;
 }/*# sourceMappingURL=profile.css.map */
+
+#light .profile {
+	transition: background-color 1s;
+	background-color: #bbbbbb;
+}
+#dark .profile {
+	transition: background-color 1s;
+	background-color: rgb(47, 47, 47);
+
+}
+#dark .profile_birthday {
+	color: azure;
+
+}
+#dark .profile_btn {
+	color: azure;
+
+}
+#dark .profile_title {
+	color: azure;
+
+}
+#dark .profile_name {
+	color: azure;
+
+}
