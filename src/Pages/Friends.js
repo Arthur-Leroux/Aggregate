@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import './style/Friends/friends.css';
 import './style/logo.css';
 import Card from '@mui/material/Card';
@@ -8,12 +8,26 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import users from '../components/assets/data/myFriends';
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
+import { SearchContext } from '../components/SearchProvider/SearchProvider';
 
 export default function Friends() {
 	const [isFriend, setIsFriend] = useState(false);
 	const friendHandler = () => {
 		setIsFriend(!isFriend);
 	};
+	const { searchTerms } = useContext(SearchContext);
+
+	const filteredFriends = users.filter((user) => {
+		// Est-ce que la description/contenu ou username correspondent au terme recherché ?
+		const descriptionMatches = user.desc
+			.toLowerCase()
+			.includes();
+		const contentMatches = user.content.toLowerCase().includes(searchTerms);
+		const usernameMatches = user.username.toLowerCase().includes(searchTerms);
+
+		return descriptionMatches || contentMatches || usernameMatches;
+	});
+
 	return (
 		<>
 			<div className='container_friends'>

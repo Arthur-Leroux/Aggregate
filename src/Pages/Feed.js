@@ -27,19 +27,13 @@ export default function Feed() {
 		setIsLiked(!isLiked);
 	};
 
-	const lowerCaseSearchTerm = searchTerms.toLowerCase();
-
 	const filteredArticles = articles.filter((article) => {
 		// Est-ce que la description/contenu ou username correspondent au terme recherché ?
-		const descriptionMatches = article.desc
-			.toLowerCase()
-			.includes(lowerCaseSearchTerm);
-		const contentMatches = article.content
-			.toLowerCase()
-			.includes(lowerCaseSearchTerm);
+		const descriptionMatches = article.desc.toLowerCase().includes(searchTerms);
+		const contentMatches = article.content.toLowerCase().includes(searchTerms);
 		const usernameMatches = article.username
 			.toLowerCase()
-			.includes(lowerCaseSearchTerm);
+			.includes(searchTerms);
 
 		return descriptionMatches || contentMatches || usernameMatches;
 	});
