@@ -56,7 +56,7 @@ export default function Login() {
 							setPassword(event.target.value);
 						}}
 					></input>
-					<button>Login</button>
+					<button className='login_button'>Login</button>
 				</form>
 			</section>
 			<div className='redirect_user'>

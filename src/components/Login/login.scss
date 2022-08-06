@@ -21,3 +21,14 @@
     font-size: larger;
   }
 }
+
+.login_button {
+  margin-top: 1rem;
+  padding-left: 2rem;
+  padding-top: 0.3rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  background: url(../assets/pictures/arrow.svg) no-repeat;
+  background-size: 25px;
+}

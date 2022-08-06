@@ -56,7 +56,9 @@ export default function Register() {
 						setPassword(event.target.value);
 					}}
 				/>
-				<button type='submit'>Register</button>
+				<button className='register_button' type='submit'>
+					Register
+				</button>
 			</form>
 		</section>
 	);

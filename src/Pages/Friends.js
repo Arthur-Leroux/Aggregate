@@ -12,7 +12,7 @@ import { SearchContext } from '../components/SearchProvider/SearchProvider';
 
 export default function Friends() {
 	const [isFriend, setIsFriend] = useState(false);
-	const [friendsId, setFriendsId] = useState([1, 2, 3, 4]);
+	const [friendsId, setFriendsId] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
 
 	const { searchTerms } = useContext(SearchContext);
 

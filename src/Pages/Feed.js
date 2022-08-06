@@ -10,6 +10,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { UserContext } from '../components/UserProvider/UserProvider';
 import fileToBase64 from '../utils/fileToBase64';
 import { SearchContext } from '../components/SearchProvider/SearchProvider';
+import dummyData from '../components/assets/data/dummyData';
 
 export default function Feed() {
 	// Context
@@ -22,9 +23,14 @@ export default function Feed() {
 	const [description, setDescription] = useState('');
 	const [selectedImage, setSelectedImage] = useState(null);
 
-	const [isLiked, setIsLiked] = useState(false);
+	const [isLiked, setIsLiked] = useState(dummyData.like);
 	const likeHandler = () => {
 		setIsLiked(!isLiked);
+	};
+
+	const [isFriend, setIsFriend] = useState(false);
+	const friendHandler = () => {
+		setIsFriend(!isFriend);
 	};
 
 	const filteredArticles = articles.filter((article) => {
@@ -37,11 +43,6 @@ export default function Feed() {
 
 		return descriptionMatches || contentMatches || usernameMatches;
 	});
-
-	const [isFriend, setIsFriend] = useState(false);
-	const friendHandler = () => {
-		setIsFriend(!isFriend);
-	};
 
 	const postNewArticle = async (event) => {
 		event.preventDefault();
