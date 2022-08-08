@@ -10,7 +10,6 @@ import { v4 as uuidv4 } from 'uuid';
 import { UserContext } from '../components/UserProvider/UserProvider';
 import fileToBase64 from '../utils/fileToBase64';
 import { SearchContext } from '../components/SearchProvider/SearchProvider';
-import dummyData from '../components/assets/data/dummyData';
 import ScrollToTop from '../components/ScrollToTop/ScrollToTop';
 
 export default function Feed() {
@@ -24,14 +23,14 @@ export default function Feed() {
 	const [description, setDescription] = useState('');
 	const [selectedImage, setSelectedImage] = useState(null);
 
-	const [isLiked, setIsLiked] = useState(dummyData.like);
-	const likeHandler = () => {
-		setIsLiked(!isLiked);
+	const likeHandler = (event) => {
+		console.log(event.target.closest('.container').getAttribute('data-id'));
+		event.target.classList.toggle('likeIcon--liked');
 	};
 
-	const [isFriend, setIsFriend] = useState(false);
-	const friendHandler = () => {
-		setIsFriend(!isFriend);
+	const friendHandler = (event) => {
+		console.log(event.target.closest('.container').getAttribute('data-id'));
+		event.target.classList.toggle('addIcon--friend');
 	};
 
 	const filteredArticles = articles.filter((article) => {
@@ -65,6 +64,8 @@ export default function Feed() {
 			date: 'Il y a quelques secondes',
 			like: 0,
 			comments: 0,
+			isLiked: false,
+			isFriend: false,
 		};
 
 		createArticle(newArticle);
@@ -115,7 +116,7 @@ export default function Feed() {
 					</div>
 					{filteredArticles.map((article) => {
 						return (
-							<div key={article.id} className='container'>
+							<div key={article.id} data-id={article.id} className='container'>
 								<div className='home_post'>
 									<div className='homeTop'>
 										<div className='home_user'>
@@ -155,8 +156,10 @@ export default function Feed() {
 									<div className='home_buttons'>
 										<div className='home_post_buttons'>
 											<FavoriteIcon
-												className={isLiked ? 'likeIcon--liked' : 'likeIcon'}
-												onClick={likeHandler}
+												className={
+													article.isLiked ? 'likeIcon--liked' : 'likeIcon'
+												}
+												onClick={(event) => likeHandler(event)}
 											/>
 											<span className='postLikeCounter'>{article.like}</span>
 											<div className='comments'>
@@ -166,8 +169,10 @@ export default function Feed() {
 												</span>
 											</div>
 											<PersonAddIcon
-												className={isFriend ? 'addIcon--friend' : 'addIcon'}
-												onClick={friendHandler}
+												className={
+													article.isFriend ? 'addIcon--friend' : 'addIcon'
+												}
+												onClick={(event) => friendHandler(event)}
 											/>
 										</div>
 									</div>

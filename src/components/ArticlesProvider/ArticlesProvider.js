@@ -5,6 +5,7 @@ export const ArticlesContext = React.createContext({});
 
 export default function ArticlesProvider(props) {
 	const [articles, setArticles] = useState(initialArticles);
+	// console.log('test article :', initialArticles[0]);
 
 	const createArticle = (article) => {
 		setArticles([article, ...articles]);

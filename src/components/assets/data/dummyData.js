@@ -12,6 +12,8 @@ export default [
 		userId: '1',
 		like: '89',
 		comment: 60,
+		isLiked: false,
+		isFriend: true,
 	},
 	{
 		id: 2,
@@ -25,6 +27,8 @@ export default [
 		userId: '2',
 		like: '1002',
 		comment: 267,
+		isLiked: true,
+		isFriend: false,
 	},
 	{
 		id: 3,
@@ -39,6 +43,8 @@ export default [
 		userId: '3',
 		like: '851',
 		comment: 30,
+		isLiked: false,
+		isFriend: true,
 	},
 	{
 		id: 4,
@@ -53,6 +59,8 @@ export default [
 		userId: '4',
 		like: '20',
 		comment: 3,
+		isLiked: true,
+		isFriend: false,
 	},
 	{
 		id: 5,
@@ -67,6 +75,8 @@ export default [
 		userId: '5',
 		like: '895',
 		comment: 500,
+		isLiked: true,
+		isFriend: true,
 	},
 	{
 		id: 6,
@@ -80,6 +90,8 @@ export default [
 		userId: '6',
 		like: '50',
 		comment: 48,
+		isLiked: true,
+		isFriend: true,
 	},
 	{
 		id: 7,
@@ -93,6 +105,8 @@ export default [
 		userId: '7',
 		like: '78',
 		comment: 36,
+		isLiked: true,
+		isFriend: false,
 	},
 	{
 		id: 8,
@@ -106,6 +120,8 @@ export default [
 		userId: '8',
 		like: '95',
 		comment: 2,
+		isLiked: true,
+		isFriend: true,
 	},
 	{
 		id: 9,
@@ -119,6 +135,8 @@ export default [
 		userId: '9',
 		like: '81',
 		comment: 67,
+		isLiked: true,
+		isFriend: true,
 	},
 	{
 		id: 10,
@@ -132,6 +150,8 @@ export default [
 		userId: '10',
 		like: '5',
 		comment: 15,
+		isLiked: true,
+		isFriend: true,
 	},
 	{
 		id: 11,
@@ -145,6 +165,8 @@ export default [
 		userId: '11',
 		like: '34',
 		comment: 9,
+		isLiked: true,
+		isFriend: true,
 	},
 	{
 		id: 12,
@@ -158,6 +180,8 @@ export default [
 		userId: '12',
 		like: '13',
 		comment: 22,
+		isLiked: true,
+		isFriend: true,
 	},
 	{
 		id: 13,
@@ -171,6 +195,8 @@ export default [
 		userId: '13',
 		like: '17',
 		comment: 4,
+		isLiked: true,
+		isFriend: true,
 	},
 	{
 		id: 14,
@@ -183,6 +209,8 @@ export default [
 		userId: '14',
 		like: '89',
 		comment: 56,
+		isLiked: true,
+		isFriend: true,
 	},
 	{
 		id: 15,
@@ -196,6 +224,8 @@ export default [
 		userId: '15',
 		like: '23',
 		comment: 48,
+		isLiked: true,
+		isFriend: true,
 	},
 	{
 		id: 16,
@@ -209,6 +239,8 @@ export default [
 		userId: '16',
 		like: '3',
 		comment: 7,
+		isLiked: true,
+		isFriend: true,
 	},
 	{
 		id: 17,
@@ -221,6 +253,8 @@ export default [
 		userId: '17',
 		like: '82',
 		comment: 100,
+		isLiked: true,
+		isFriend: true,
 	},
 	{
 		id: 18,
@@ -234,6 +268,8 @@ export default [
 		userId: '18',
 		like: '256',
 		comment: 137,
+		isLiked: true,
+		isFriend: true,
 	},
 	{
 		id: 19,
@@ -247,6 +283,8 @@ export default [
 		userId: '19',
 		like: '8',
 		comment: 0,
+		isLiked: true,
+		isFriend: true,
 	},
 	{
 		id: 20,
@@ -260,6 +298,8 @@ export default [
 		userId: '20',
 		like: '65',
 		comment: 77,
+		isLiked: true,
+		isFriend: true,
 	},
 	{
 		id: 21,
@@ -273,6 +313,8 @@ export default [
 		userId: '21',
 		like: '1',
 		comment: 1,
+		isLiked: true,
+		isFriend: true,
 	},
 	{
 		id: 22,
@@ -286,6 +328,8 @@ export default [
 		userId: '22',
 		like: '12',
 		comment: 0,
+		isLiked: true,
+		isFriend: true,
 	},
 	{
 		id: 23,
@@ -299,6 +343,8 @@ export default [
 		userId: '23',
 		like: '1',
 		comment: 48,
+		isLiked: true,
+		isFriend: true,
 	},
 	{
 		id: 24,
@@ -312,6 +358,8 @@ export default [
 		userId: '24',
 		like: '6',
 		comment: 45,
+		isLiked: true,
+		isFriend: true,
 	},
 	{
 		id: 25,
@@ -324,5 +372,7 @@ export default [
 		userId: '25',
 		like: '50',
 		comment: 9,
+		isLiked: true,
+		isFriend: true,
 	},
 ];

@@ -13,12 +13,16 @@
   border-radius: 20px;
   overflow-y: scroll;
   &_left{
+    transition: background 1s;
+  transition: box-shadow 1s;
     width: 50%;
     display: grid;
     place-items: center;
     float: left;
   }
   &_right {
+    transition: background 1s;
+  transition: box-shadow 1s;
     width: 50%;
     display: grid;
     place-items: center;
@@ -38,10 +42,6 @@
     color: black;
   }
   &_name {
-    text-align: center;
-    color: black;
-  }
-  &_birthday {
     text-align: center;
     color: black;
   }
@@ -65,7 +65,10 @@
     text-align: center;
     color: black;
   }
-  
+  &_btn {
+    cursor: pointer;
+    margin-top: 20px;
+  }
 }
 
 .my_current_profile {
@@ -89,4 +92,52 @@
 }
 .profile::-webkit-scrollbar-thumb {
   background: rgb(255, 145, 0); 
+}
+
+#dark .profile_left {
+	transition: background 1s;
+	transition: box-shadow 1s;
+  width: 40%;
+	background: rgba(255, 255, 255, 0.641);
+	box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+	backdrop-filter: blur( 4px );
+	-webkit-backdrop-filter: blur( 4px );
+	border-radius: 10px;
+	border: 1px solid rgba( 255, 255, 255, 0.18 );
+	padding: 1rem;
+}
+
+#dark .profile_right {
+  transition: background 1s;
+  transition: box-shadow 1s;
+  width: 40%;
+  background: rgba(255, 255, 255, 0.641);
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.profile_birthday {
+  display: flex;
+    text-align: center;
+    color: black;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  &_day{
+    width: 50px;
+    color: black;
+  }
+  &_month{
+    width: 50px;
+    color: black;
+  }
+  &_year{
+    width: 100px;
+    color: black;
+  }
 }

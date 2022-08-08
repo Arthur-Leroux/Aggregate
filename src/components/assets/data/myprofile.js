@@ -11,7 +11,11 @@ export default {
 	firstname: 'Bruce',
 	name: 'Wayne',
 	gender: 'male',
-	birthdate: '1939/30/03',
+	birthdate: {
+		day: 30,
+		month: 3,
+		year: 1939,
+	},
 	job: 'Peacekeeper',
 	description: "Freeze, t'es givré",
 	address: 'Gotham City, New Jersey',
