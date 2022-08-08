@@ -51,7 +51,119 @@ export default function Profile() {
 		<>
 			<div className='profile'>
 				<div className='my_profile'>
-					<h2 className='customize'>Customize my profile ⬇️</h2>
+					<div className='left_profile'>
+						<h2 className='customize'>Customize my profile ⬇️</h2>
+						<section className='profile_left'>
+							<div className='first_input'>
+								<label className='label_top'>Firstname :</label>
+								<input
+									className='profile_firstname'
+									type='text'
+									placeholder='Firstname'
+									value={firstname}
+									onChange={(event) =>
+										handleFirstnameChange(event.target.value)
+									}
+								></input>
+							</div>
+							<div className='second_input'>
+								<label>Lastname :</label>
+								<input //! Changement de côté : gauche
+									className='profile_name'
+									type='text'
+									placeholder='Name'
+									value={name}
+									onChange={(event) => handleNameChange(event.target.value)}
+								></input>
+							</div>
+							<div className='third_input'>
+								<label>Birthdate :</label>
+								<div className='profile_birthday'>
+									<label className='profile_birthday_label'>(DD/MM/YYYY)</label>
+									<input
+										className='profile_birthday_day'
+										type='number'
+										placeholder='Day'
+										min='01'
+										max='31'
+										value={birthdateDay}
+										onChange={(event) =>
+											handleBirthdateDayChange(event.target.value)
+										}
+									></input>
+									<input
+										className='profile_birthday_month'
+										type='number'
+										placeholder='Month'
+										min='01'
+										max='12'
+										value={birthdateMonth}
+										onChange={(event) =>
+											handleBirthdateMonthChange(event.target.value)
+										}
+									></input>
+									<input
+										className='profile_birthday_year'
+										type='number'
+										placeholder='Year'
+										min='1900'
+										max='2020'
+										value={birthdateYear}
+										onChange={(event) =>
+											handleBirthdateYearChange(event.target.value)
+										}
+									></input>
+								</div>
+							</div>
+							<div className='fourth_input'>
+								<label>Job :</label>
+								<input
+									className='profile_job'
+									type='text'
+									placeholder='My current job'
+									value={job}
+									onChange={(event) => handleJobChange(event.target.value)}
+								></input>
+							</div>
+							<div className='fifth_input'>
+								<label>Bio :</label>
+								<textarea
+									className='profile_description'
+									type='text'
+									placeholder='Add a bio'
+									value={description}
+									onChange={(event) =>
+										handleDescriptionChange(event.target.value)
+									}
+								></textarea>
+							</div>
+							<div className='sixth_input'>
+								<label>My Gender :</label>
+								<select
+									name='gender'
+									className='profile_gender'
+									defaultValue={gender}
+									onChange={(event) => handleGenderChange(event.target.value)}
+								>
+									<option value='Man'>Man</option>
+									<option value='Woman'>Woman</option>
+								</select>
+							</div>
+							<div className='seventh_input'>
+								<label>Address :</label>
+								<input
+									className='profile_address'
+									type='text'
+									placeholder='Town, State, Country'
+									value={address}
+									onChange={(event) => handleAddressChange(event.target.value)}
+								></input>
+							</div>
+							<button className='profile_btn' type='submit'>
+								Send
+							</button>
+						</section>
+					</div>
 					<Card
 						key={myprofile.id}
 						sx={{ maxWidth: 345 }}
@@ -95,98 +207,9 @@ export default function Profile() {
 							</CardContent>
 						</CardActionArea>
 					</Card>
-					<h2 className='access'>⬇️ Customize my access</h2>
-				</div>
+					<div className='edit_my_profile'>
+						<h2 className='access'>⬇️ Customize my access</h2>
 
-				<div className='edit_my_profile'>
-					<form>
-						<section className='profile_left'>
-							<input
-								className='profile_firstname'
-								type='text'
-								placeholder='Firstname'
-								value={firstname}
-								onChange={(event) => handleFirstnameChange(event.target.value)}
-							></input>
-							<input //! Changement de côté : gauche
-								className='profile_name'
-								type='text'
-								placeholder='Name'
-								value={name}
-								onChange={(event) => handleNameChange(event.target.value)}
-							></input>
-							<div className='profile_birthday'>
-								<label className='profile_birthday_label'>DD/MM/YYYY</label>
-								<input
-									className='profile_birthday_day'
-									type='number'
-									placeholder='Day'
-									min='01'
-									max='31'
-									value={birthdateDay}
-									onChange={(event) =>
-										handleBirthdateDayChange(event.target.value)
-									}
-								></input>
-								<input
-									className='profile_birthday_month'
-									type='number'
-									placeholder='Month'
-									min='01'
-									max='12'
-									value={birthdateMonth}
-									onChange={(event) =>
-										handleBirthdateMonthChange(event.target.value)
-									}
-								></input>
-								<input
-									className='profile_birthday_year'
-									type='number'
-									placeholder='Year'
-									min='1900'
-									max='2020'
-									value={birthdateYear}
-									onChange={(event) =>
-										handleBirthdateYearChange(event.target.value)
-									}
-								></input>
-							</div>
-							<input
-								className='profile_job'
-								type='text'
-								placeholder='My current job'
-								value={job}
-								onChange={(event) => handleJobChange(event.target.value)}
-							></input>
-							<textarea
-								className='profile_description'
-								type='text'
-								placeholder='Add a bio'
-								value={description}
-								onChange={(event) =>
-									handleDescriptionChange(event.target.value)
-								}
-							></textarea>
-							<select
-								name='gender'
-								className='profile_gender'
-								defaultValue={gender}
-								onChange={(event) => handleGenderChange(event.target.value)}
-							>
-								<option value='Man'>Man</option>
-								<option value='Woman'>Woman</option>
-							</select>
-							<input
-								className='profile_address'
-								type='text'
-								placeholder='Town, State, Country'
-								value={address}
-								onChange={(event) => handleAddressChange(event.target.value)}
-							></input>
-							<button className='profile_btn' type='submit'>
-								Send
-							</button>
-						</section>
 						<section className='profile_right'>
 							<form className='profile_user_credentials'>
 								<input //! Changement de côté : droit
@@ -209,7 +232,7 @@ export default function Profile() {
 								</button>
 							</form>
 						</section>
-					</form>
+					</div>
 				</div>
 			</div>
 		</>

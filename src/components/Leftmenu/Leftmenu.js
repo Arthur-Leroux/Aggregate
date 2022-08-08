@@ -21,13 +21,21 @@ export default function Leftmenu() {
 					}}
 				></input>
 			</form>
-			<NavLink to='/' className='form_profile'>
+			<NavLink to='/' className='form_profile' activeClassName='selected'>
 				My Feed
 			</NavLink>
-			<NavLink to='/profile' className='form_profile'>
+			<NavLink
+				to='/profile'
+				className='form_profile'
+				activeClassName='selected'
+			>
 				My profile
 			</NavLink>
-			<NavLink to='/friends' className='form_profile'>
+			<NavLink
+				to='/friends'
+				className='form_profile'
+				activeClassName='selected'
+			>
 				My Friends
 			</NavLink>
 		</div>

@@ -1,3 +1,19 @@
+.label_top {
+  margin-top: 10px;
+}
+
+label {
+  transition: color 1s;
+  margin-right: 10px;
+  font-family: "Bebas Neue", cursive;
+  font-size: x-large;
+}
+
+#dark label {
+  transition: color 1s;
+  color: azure;
+}
+
 .profile {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -5,8 +21,8 @@
   flex-direction: column;
   transition: background-color 1s;
   background-color: #dedede;
-  height: 76vh;
-  margin-left: 20px;
+  height: 79.4vh;
+  margin-left: 10px;
   margin-right: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -14,9 +30,7 @@
   overflow-y: scroll;
 }
 .profile_left {
-  transition: background 1s;
   transition: box-shadow 1s;
-  width: 50%;
   display: grid;
   place-items: center;
   float: left;
@@ -24,7 +38,6 @@
 .profile_right {
   transition: background 1s;
   transition: box-shadow 1s;
-  width: 50%;
   display: grid;
   place-items: center;
   margin-top: 4rem;
@@ -38,17 +51,40 @@
   padding-top: 3rem;
 }
 .profile_firstname {
-  margin-top: 4rem;
+  font-size: large;
   text-align: center;
+  transition: color 1s;
   color: black;
 }
 .profile_name {
+  font-size: larger;
   text-align: center;
+  transition: color 1s;
   color: black;
 }
 .profile_job {
+  font-size: larger;
   text-align: center;
+  transition: color 1s;
   color: black;
+}
+.profile_description {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 20rem;
+  height: 100px;
+  border: none;
+  background-color: rgb(249, 249, 249);
+  font-size: larger;
+  text-align: center;
+}
+.profile_gender {
+  background-color: rgb(249, 249, 249);
+  width: 350px;
+  height: 30px;
+  border: none;
+  font-size: large;
+  text-align: center;
 }
 .profile_email {
   text-align: center;
@@ -64,11 +100,38 @@
 }
 .profile_address {
   text-align: center;
+  transition: color 1s;
   color: black;
 }
 .profile_btn {
   cursor: pointer;
   margin-top: 20px;
+  margin-top: 1rem;
+  padding-left: 2rem;
+  padding-top: 0.3rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  background: url(../../../components/assets/pictures/arrow.svg) no-repeat;
+  background-size: 25px;
+}
+
+#dark .profile_btn {
+  color: azure;
+  background-color: azure;
+}
+
+#dark .profile_firstname {
+  transition: color 1s;
+  color: azure;
+}
+#dark .profile_job {
+  transition: color 1s;
+  color: azure;
+}
+#dark .profile_address {
+  transition: color 1s;
+  color: azure;
 }
 
 .my_current_profile {
@@ -107,28 +170,51 @@
   align-items: center;
 }
 .profile_birthday_day {
+  transition: color 1s;
   width: 50px;
   color: black;
   text-align: center;
 }
 .profile_birthday_month {
+  transition: color 1s;
   width: 50px;
   color: black;
   text-align: center;
 }
 .profile_birthday_year {
+  transition: color 1s;
   width: 100px;
   color: black;
   text-align: center;
 }
 .profile_birthday_label {
+  transition: color 1s;
   width: 74px;
   font-size: smaller;
 }
 
+#dark .profile_birthday_label {
+  transition: color 1s;
+  color: azure;
+}
+#dark .profile_birthday_day {
+  color: azure;
+  transition: color 1s;
+}
+#dark .profile_birthday_month {
+  transition: color 1s;
+  color: azure;
+}
+#dark .profile_birthday_year {
+  transition: color 1s;
+  color: azure;
+}
+
 .edit_my_profile {
-  display: grid;
-  grid-template-columns: auto;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
 }
 
 .customize {
@@ -151,4 +237,74 @@
 #dark .access {
   transition: color 1s;
   color: azure;
+}
+
+.first_input {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.second_input {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.third_input {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.fourth_input {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.fifth_input {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.sixth_input {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.seventh_input {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.left_profile {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
 }/*# sourceMappingURL=profile.css.map */

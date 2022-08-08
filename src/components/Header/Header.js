@@ -22,9 +22,16 @@ export default function Header() {
 	return (
 		<section className='header'>
 			<img src={logo} alt='logo' className='logo' />
-			<h1 className='header_title_main' alt='hearder title' rel='noreferrer'>
+
+			<h1
+				className='header_title_main'
+				alt='hearder title'
+				rel='noreferrer'
+				onClickURL='/'
+			>
 				Aggregate
 			</h1>
+
 			<div className='darkmode_toggle'>
 				<span className='darkmode_toggle_light'>
 					<LightbulbIcon className='light_icon' />

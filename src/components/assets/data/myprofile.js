@@ -17,6 +17,6 @@ export default {
 		year: 1939,
 	},
 	job: 'Peacekeeper',
-	description: "Freeze, t'es givré",
+	description: "Freeze, t'es givré 🥶",
 	address: 'Gotham City, New Jersey',
 };
