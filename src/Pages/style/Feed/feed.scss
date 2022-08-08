@@ -128,7 +128,6 @@ font-size: 12px;
   color: #1a02f5;
 }
 
-
 .postLikeCounter{
   font-size: 15px;
   padding-right: 3rem;
@@ -181,7 +180,7 @@ font-size: 12px;
   cursor: pointer;
 }
 .addIcon--friend{
-  transform: scale(1.4);
+  transition: color 1s;
   transition: all .2s ease-in-out;
   color: rgb(0, 172, 0);
   cursor: pointer;
@@ -249,18 +248,7 @@ padding: 3rem;
   }
 }
 
-#dark .user_post{
-  &_content{
-    transition: color 1s;
-  color: azure;
-  font-weight: bolder;
-  }
-  &_description{
-    transition: color 1s;
-    color: azure;
-    font-weight: bolder;
-  }
-}
+
 
 
 .user_post_form {
@@ -300,9 +288,14 @@ padding: 1rem;
 }
 
 .top_btn_position{
-  position: sticky;
-  bottom: 15px;
-  right: 20px;
+  position: fixed;
+  z-index: 999;
+  bottom: -50px;
+  right: 125px;
+  transition: bottom 0.5s ease;
+  &.open{
+    bottom: 125px;
+  }
 }
 
 .top_btn_style{

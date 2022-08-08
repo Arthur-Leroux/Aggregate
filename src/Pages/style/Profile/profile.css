@@ -83,8 +83,9 @@
 
 .my_profile {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
+  flex-direction: row;
 }
 
 .profile::-webkit-scrollbar {
@@ -93,31 +94,6 @@
 
 .profile::-webkit-scrollbar-thumb {
   background: rgb(255, 145, 0);
-}
-
-#dark .profile_left {
-  transition: background 1s;
-  transition: box-shadow 1s;
-  width: 40%;
-  background: rgba(255, 255, 255, 0.641);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  padding: 1rem;
-}
-
-#dark .profile_right {
-  transition: background 1s;
-  transition: box-shadow 1s;
-  width: 40%;
-  background: rgba(255, 255, 255, 0.641);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .profile_birthday {
@@ -133,12 +109,46 @@
 .profile_birthday_day {
   width: 50px;
   color: black;
+  text-align: center;
 }
 .profile_birthday_month {
   width: 50px;
   color: black;
+  text-align: center;
 }
 .profile_birthday_year {
   width: 100px;
   color: black;
+  text-align: center;
+}
+.profile_birthday_label {
+  width: 74px;
+  font-size: smaller;
+}
+
+.edit_my_profile {
+  display: grid;
+  grid-template-columns: auto;
+}
+
+.customize {
+  transition: color 1s;
+  color: black;
+  font-size: xx-large;
+}
+
+#dark .customize {
+  transition: color 1s;
+  color: azure;
+}
+
+.access {
+  transition: color 1s;
+  color: black;
+  font-size: xx-large;
+}
+
+#dark .access {
+  transition: color 1s;
+  color: azure;
 }/*# sourceMappingURL=profile.css.map */

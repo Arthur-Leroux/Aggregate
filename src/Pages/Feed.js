@@ -73,9 +73,9 @@ export default function Feed() {
 
 	return (
 		<>
+			<ScrollToTop />
 			<div className='home'>
 				<div className='home_blur'>
-					<ScrollToTop />
 					<div className='user_post'>
 						<div className='user_frame'>
 							<form className='user_post_form' onSubmit={postNewArticle}>

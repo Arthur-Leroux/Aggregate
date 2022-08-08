@@ -51,6 +51,7 @@ export default function Profile() {
 		<>
 			<div className='profile'>
 				<div className='my_profile'>
+					<h2 className='customize'>Customize my profile ⬇️</h2>
 					<Card
 						key={myprofile.id}
 						sx={{ maxWidth: 345 }}
@@ -80,20 +81,21 @@ export default function Profile() {
 									{birthdateDay + '/' + birthdateMonth + '/' + birthdateYear}
 								</Typography>
 								<Typography variant='body2' color='text.secondary'>
-									Gender : {myprofile.gender}
+									Gender : {gender}
 								</Typography>
 								<Typography variant='body2' color='text.secondary'>
-									Job : {myprofile.job}
+									Job : {job}
 								</Typography>
 								<Typography variant='body2' color='text.secondary'>
-									My bio : {myprofile.description}
+									My bio : {description}
 								</Typography>
 								<Typography variant='body2' color='text.secondary'>
-									Address : {myprofile.address}
+									Address : {address}
 								</Typography>
 							</CardContent>
 						</CardActionArea>
 					</Card>
+					<h2 className='access'>⬇️ Customize my access</h2>
 				</div>
 
 				<div className='edit_my_profile'>
@@ -114,6 +116,7 @@ export default function Profile() {
 								onChange={(event) => handleNameChange(event.target.value)}
 							></input>
 							<div className='profile_birthday'>
+								<label className='profile_birthday_label'>DD/MM/YYYY</label>
 								<input
 									className='profile_birthday_day'
 									type='number'
@@ -164,12 +167,14 @@ export default function Profile() {
 									handleDescriptionChange(event.target.value)
 								}
 							></textarea>
-							<select name='gender' className='profile_gender'>
-								<option value='' selected disabled hidden>
-									My gender
-								</option>
-								<option value='man'>Man</option>
-								<option value='woman'>Woman</option>
+							<select
+								name='gender'
+								className='profile_gender'
+								defaultValue={gender}
+								onChange={(event) => handleGenderChange(event.target.value)}
+							>
+								<option value='Man'>Man</option>
+								<option value='Woman'>Woman</option>
 							</select>
 							<input
 								className='profile_address'

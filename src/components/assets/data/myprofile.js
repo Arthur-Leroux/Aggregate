@@ -10,7 +10,7 @@ export default {
 	password: 'parents',
 	firstname: 'Bruce',
 	name: 'Wayne',
-	gender: 'male',
+	gender: 'Man',
 	birthdate: {
 		day: 30,
 		month: 3,

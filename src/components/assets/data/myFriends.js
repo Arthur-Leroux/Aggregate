@@ -4,7 +4,7 @@ export default [
 		id: 1,
 		profilePicture: 'https://images.unsplash.com/photo-1544725176-7c40e5a71c5e',
 		username: 'Emily Casa',
-		desc: 'On en parle des punaises de lit ???',
+		desc: 'Front Dev : PhP, React',
 		content:
 			"Quand je dors, j'ai des trucs qui me piquent, c'est bizarre, quelqu'un a une solution ? Merci",
 		photo: 'https://images.pexels.com/photos/9742971/pexels-photo-9742971.jpeg',
@@ -18,7 +18,7 @@ export default [
 		profilePicture:
 			'https://images.unsplash.com/photo-1527980965255-d3b416303d12',
 		username: 'Jean Dupont',
-		desc: "RAMMSTEIN C'EST LA VIE",
+		desc: 'CTO Freelance',
 		content: "J'ai pas pu faire le concert, j'avais le covid #prayforme",
 		photo: 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3',
 		date: 'Il y a 15 minutes',
@@ -31,7 +31,7 @@ export default [
 		profilePicture:
 			'https://images.unsplash.com/photo-1623330188314-8f4645626731',
 		username: 'Andrea Fermier',
-		desc: "J'aime pas le back-end, tuez-moi !!!",
+		desc: "O'Clock Student",
 		content:
 			"Alors, c'est très simple, je HAIS le back, je le fight à trois heures du matin, j'y comprends rien, sauvez moi de cette misère svp",
 		photo: null,
@@ -45,7 +45,7 @@ export default [
 		profilePicture:
 			'https://images.unsplash.com/photo-1607746882042-944635dfe10e',
 		username: 'Maria De Dolores',
-		desc: "J'me casse",
+		desc: 'Web Designer',
 		content:
 			'Je rigole, je suis fauchée, faites un don sur gofindme afin que je puisse partir en vacances, merci',
 		photo: 'https://images.unsplash.com/photo-1561414927-6d86591d0c4f',
@@ -59,7 +59,7 @@ export default [
 		profilePicture:
 			'https://images.unsplash.com/photo-1594189683218-b5a9a346a43f',
 		username: 'Jack Lanterne',
-		desc: "Jarrête le code, je vais devenir éléveur caprin, bisous'",
+		desc: 'Dev Backend',
 		content:
 			"Tout est dans le titre, j'ai enfin trouver quoi faire de ma vie. Demain je serais aux Alpes, bisous les nulles",
 		photo: null,
@@ -73,7 +73,7 @@ export default [
 		profilePicture:
 			'https://images.unsplash.com/photo-1571512599285-9ac4fdf3dba9',
 		username: 'Richard Geeroux',
-		desc: 'Nouvelle Passion : Le Tricot sur voile',
+		desc: 'Graphic Designer at Marvel Studio ®',
 		content: "cela peut paraître étrange, mais voilà, j'aime le tricot",
 		photo: 'https://images.unsplash.com/photo-1615310748170-29d7088865ad',
 		date: 'Il y a une semaine',
@@ -85,8 +85,8 @@ export default [
 		id: 7,
 		profilePicture:
 			'https://images.unsplash.com/photo-1500258593672-b080c40f4b02',
-		username: 'Alexandre Ocaillo',
-		desc: 'vivement le week end !',
+		username: 'Alexandra Ramirez',
+		desc: 'Need help on a FullStack project',
 		content: 'APÉROOOOOO !!!',
 		photo: null,
 		date: 'Il y a 3 mois',
@@ -99,7 +99,7 @@ export default [
 		profilePicture:
 			'https://images.unsplash.com/photo-1582140141257-f4588733e374',
 		username: 'Mathilde Fruyo',
-		desc: "Je suis acceptée à l'armée aprés une formation raté !",
+		desc: 'SysAdmin',
 		content: '',
 		photo: 'https://images.unsplash.com/photo-1626701293177-9bff6eebaaf9',
 		date: 'Il y a 2 heure',
@@ -112,7 +112,7 @@ export default [
 		profilePicture:
 			'https://images.unsplash.com/photo-1619451684167-8099a2636378',
 		username: 'Matthieu Groilet',
-		desc: "salut la population je suis a la recherche d'un nouveau véhicule :)",
+		desc: 'Tech Blogger',
 		content: "cela peut paraître étrange, mais voilà, j'aime le tricot",
 		photo: 'https://images.unsplash.com/photo-1653393644395-c396ffc1d046',
 		date: 'Il y a 2 semaines',
@@ -124,8 +124,8 @@ export default [
 		id: 10,
 		profilePicture:
 			'https://images.unsplash.com/photo-1588979355313-6711a095465f',
-		username: 'Clement Tuillo',
-		desc: '',
+		username: 'Clement Meurise',
+		desc: 'Photographer',
 		content: "Début d'une nouvelle vie grace à O'clock",
 		photo: null,
 		date: 'Il y a 20 min',

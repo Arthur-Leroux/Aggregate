@@ -6,8 +6,10 @@ const ScrollToTop = () => {
 	const [showScrollTopButton, setShowScrollTopButton] = useState(false);
 
 	useEffect(() => {
-		window.addEventListener('scroll', () => {
-			if (window.scrollY > 300) {
+		const homeBlurElement = document.querySelector('.home_blur');
+		homeBlurElement.addEventListener('scroll', () => {
+			console.log(homeBlurElement.scrollTop);
+			if (homeBlurElement.scrollTop > 1400) {
 				setShowScrollTopButton(true);
 			} else {
 				setShowScrollTopButton(false);
@@ -16,20 +18,21 @@ const ScrollToTop = () => {
 	}, []);
 
 	const scrollTop = () => {
-		window.scrollTo({
+		const homeBlurElement = document.querySelector('.home_blur');
+		homeBlurElement.scrollTo({
 			top: 0,
 			behavior: 'smooth',
 		});
 	};
 	return (
-		<div>
-			{showScrollTopButton && (
-				<FaAngleDoubleUp
-					className='top_btn_position top_btn_style'
-					onClick={scrollTop}
-				/>
-			)}
-		</div>
+		<FaAngleDoubleUp
+			className={
+				showScrollTopButton
+					? 'top_btn_position top_btn_style open'
+					: 'top_btn_position top_btn_style'
+			}
+			onClick={scrollTop}
+		/>
 	);
 };
 
