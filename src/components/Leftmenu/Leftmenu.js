@@ -30,7 +30,6 @@ export default function Leftmenu() {
 			<NavLink to='/friends' className='form_profile'>
 				My Friends
 			</NavLink>
-			<button>Test</button>
 		</div>
 	);
 }

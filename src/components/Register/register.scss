@@ -44,3 +44,15 @@ input:focus{
   background: url(../assets/pictures/arrow.svg) no-repeat;
   background-size: 25px;
 }
+
+.redirect_user{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &_question{
+    font-size: larger;
+  }
+  &_link{
+    font-size: larger;
+  }
+}

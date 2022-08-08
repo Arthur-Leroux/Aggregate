@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './style/Profile/profile.css';
 import FileInput from '../components/FileInput/FileInput';
 import Card from '@mui/material/Card';
@@ -9,6 +9,17 @@ import { CardActionArea } from '@mui/material';
 import myprofile from '../components/assets/data/myprofile';
 
 export default function Profile() {
+	const [firstname, setFirstname] = useState(myprofile.firstname);
+	function firstnameHandler() {
+		console.log('Tu as écris dans le champs controlé');
+	}
+	// const [name, setName] = useState('RICARD');
+	// const [birthdate, setBirthdate] = useState('1985/12/23');
+	// const [gender, setGender] = useState('Male');
+	// const [job, setJob] = useState('Astronaute');
+	// const [description, setDescription] = useState('Code warrior');
+	// const [address, setAddress] = useState('Marmande, France');
+
 	return (
 		<>
 			<div className='profile'>
@@ -26,8 +37,16 @@ export default function Profile() {
 								alt='perso_profile'
 							/>
 							<CardContent>
-								<Typography gutterBottom variant='h5' component='div'>
-									Name : {myprofile.firstname} {myprofile.name}
+								<Typography
+									gutterBottom
+									variant='h5'
+									component='div'
+									value={firstname}
+									onChange={(event) => {
+										setFirstname(event.target.value);
+									}}
+								>
+									Firstname : {firstname}
 								</Typography>
 								<Typography variant='body2' color='text.secondary'>
 									Birthdate : {myprofile.birthdate}
@@ -39,7 +58,7 @@ export default function Profile() {
 									Job : {myprofile.job}
 								</Typography>
 								<Typography variant='body2' color='text.secondary'>
-									Description : {myprofile.description}
+									My bio : {myprofile.description}
 								</Typography>
 								<Typography variant='body2' color='text.secondary'>
 									Address : {myprofile.address}

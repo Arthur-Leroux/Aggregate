@@ -11,6 +11,7 @@ import { UserContext } from '../components/UserProvider/UserProvider';
 import fileToBase64 from '../utils/fileToBase64';
 import { SearchContext } from '../components/SearchProvider/SearchProvider';
 import dummyData from '../components/assets/data/dummyData';
+import ScrollToTop from '../components/ScrollToTop/ScrollToTop';
 
 export default function Feed() {
 	// Context
@@ -73,38 +74,44 @@ export default function Feed() {
 		<>
 			<div className='home'>
 				<div className='home_blur'>
+					<ScrollToTop />
 					<div className='user_post'>
-						<form className='user_post_form' onSubmit={postNewArticle}>
-							<input
-								className='user_post_content'
-								placeholder='Type your message'
-								name='content'
-								value={content}
-								onChange={(event) => {
-									setContent(event.target.value);
-								}}
-							></input>
+						<div className='user_frame'>
+							<form className='user_post_form' onSubmit={postNewArticle}>
+								<input
+									className='user_post_content'
+									placeholder='Type your message'
+									name='content'
+									value={content}
+									onChange={(event) => {
+										setContent(event.target.value);
+									}}
+								></input>
 
-							<p>or</p>
+								<p>or</p>
 
-							<div className='picUploader'>
-								<FileInput value={selectedImage} onChange={setSelectedImage} />
-							</div>
+								<div className='picUploader'>
+									<FileInput
+										value={selectedImage}
+										onChange={setSelectedImage}
+									/>
+								</div>
 
-							<input
-								className='user_post_description'
-								placeholder='Type your image description'
-								name='desc'
-								value={description}
-								onChange={(event) => {
-									setDescription(event.target.value);
-								}}
-							></input>
+								<input
+									className='user_post_description'
+									placeholder='Type your image description'
+									name='desc'
+									value={description}
+									onChange={(event) => {
+										setDescription(event.target.value);
+									}}
+								></input>
 
-							<button type='submit' className='user_post_form_submit_btn'>
-								SEND
-							</button>
-						</form>
+								<button type='submit' className='user_post_form_submit_btn'>
+									SEND
+								</button>
+							</form>
+						</div>
 					</div>
 					{filteredArticles.map((article) => {
 						return (

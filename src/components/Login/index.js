@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { Navigate, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './login.css';
 import axios from 'axios';
 import { UserContext } from '../UserProvider/UserProvider';
