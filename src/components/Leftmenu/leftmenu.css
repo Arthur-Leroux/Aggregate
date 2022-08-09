@@ -1,19 +1,31 @@
 .form {
-	background-color: rgb(222, 222, 222);
 	margin-top: 10px;
 	margin-left: 10px;
 	margin-bottom: 10px;
 	width: 17rem;
 	height: 100vh;
 	display: grid;
-	grid-auto-rows: 100px;
-	border-radius: 20px;
-	align-content: top;
+	border-radius: 30px;
+	margin: 10px;
 	justify-content: center;
-	align-items: start;
-	justify-items: center;
+	align-items: center;
+
+	
+}
+
+#light .form {
+	transition: background-color 1s;
+	background-color: rgb(222, 222, 222);
+}
+
+#dark .form {
+	transition: background-color 1s;
+	background-color: rgb(47, 47, 47);
 }
 .form_profile {
+	align-items: center;
+    display: grid;
+    justify-content: center;
 	font-family: 'Righteous', serif;
 	cursor: pointer;
 	background: -webkit-linear-gradient(
@@ -30,4 +42,10 @@
 
 .form_search {
 	width: 16rem;
+	text-align: center;
+	color: black;
+}
+
+#dark .form_search {
+	color: azure;
 }
