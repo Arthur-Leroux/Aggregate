@@ -5,6 +5,7 @@ export const ArticlesContext = React.createContext({});
 
 export default function ArticlesProvider(props) {
 	const [articles, setArticles] = useState(initialArticles);
+	// console.log('test article :', initialArticles[0]);
 
 	const createArticle = (article) => {
 		setArticles([article, ...articles]);
@@ -16,7 +17,11 @@ export default function ArticlesProvider(props) {
 
 	return (
 		<ArticlesContext.Provider
-			value={{ articles, createArticle, deleteArticle }}
+			value={{
+				articles,
+				createArticle,
+				deleteArticle,
+			}}
 		>
 			{props.children}
 		</ArticlesContext.Provider>

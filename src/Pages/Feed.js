@@ -9,27 +9,40 @@ import FileInput from '../components/FileInput/FileInput';
 import { v4 as uuidv4 } from 'uuid';
 import { UserContext } from '../components/UserProvider/UserProvider';
 import fileToBase64 from '../utils/fileToBase64';
+import { SearchContext } from '../components/SearchProvider/SearchProvider';
+import ScrollToTop from '../components/ScrollToTop/ScrollToTop';
 
 export default function Feed() {
+	// Context
 	const { articles, createArticle } = useContext(ArticlesContext);
-
 	const { user } = useContext(UserContext);
+	const { searchTerms } = useContext(SearchContext);
 
-	console.log('CONNECTE AVEC USER:', user);
-
+	// State
 	const [content, setContent] = useState('');
 	const [description, setDescription] = useState('');
 	const [selectedImage, setSelectedImage] = useState(null);
 
-	const [isLiked, setIsLiked] = useState(false);
-	const likeHandler = () => {
-		setIsLiked(!isLiked);
+	const likeHandler = (event) => {
+		console.log(event.target.closest('.container').getAttribute('data-id'));
+		event.target.classList.toggle('likeIcon--liked');
 	};
 
-	const [isFriend, setIsFriend] = useState(false);
-	const friendHandler = () => {
-		setIsFriend(!isFriend);
+	const friendHandler = (event) => {
+		console.log(event.target.closest('.container').getAttribute('data-id'));
+		event.target.classList.toggle('addIcon--friend');
 	};
+
+	const filteredArticles = articles.filter((article) => {
+		// Est-ce que la description/contenu ou username correspondent au terme recherché ?
+		const descriptionMatches = article.desc.toLowerCase().includes(searchTerms);
+		const contentMatches = article.content.toLowerCase().includes(searchTerms);
+		const usernameMatches = article.username
+			.toLowerCase()
+			.includes(searchTerms);
+
+		return descriptionMatches || contentMatches || usernameMatches;
+	});
 
 	const postNewArticle = async (event) => {
 		event.preventDefault();
@@ -51,6 +64,8 @@ export default function Feed() {
 			date: 'Il y a quelques secondes',
 			like: 0,
 			comments: 0,
+			isLiked: false,
+			isFriend: false,
 		};
 
 		createArticle(newArticle);
@@ -58,44 +73,50 @@ export default function Feed() {
 
 	return (
 		<>
+			<ScrollToTop />
 			<div className='home'>
 				<div className='home_blur'>
 					<div className='user_post'>
-						<form className='user_post_form' onSubmit={postNewArticle}>
-							<input
-								className='user_post_message'
-								placeholder='Type your message'
-								name='content'
-								value={content}
-								onChange={(event) => {
-									setContent(event.target.value);
-								}}
-							></input>
+						<div className='user_frame'>
+							<form className='user_post_form' onSubmit={postNewArticle}>
+								<input
+									className='user_post_content'
+									placeholder='Type your message'
+									name='content'
+									value={content}
+									onChange={(event) => {
+										setContent(event.target.value);
+									}}
+								></input>
 
-							<p>or</p>
+								<p>or</p>
 
-							<div className='picUploader'>
-								<FileInput value={selectedImage} onChange={setSelectedImage} />
-							</div>
+								<div className='picUploader'>
+									<FileInput
+										value={selectedImage}
+										onChange={setSelectedImage}
+									/>
+								</div>
 
-							<input
-								className='user_post_message'
-								placeholder='Type your image description'
-								name='desc'
-								value={description}
-								onChange={(event) => {
-									setDescription(event.target.value);
-								}}
-							></input>
+								<input
+									className='user_post_description'
+									placeholder='Type your image description'
+									name='desc'
+									value={description}
+									onChange={(event) => {
+										setDescription(event.target.value);
+									}}
+								></input>
 
-							<button type='submit' className='user_post_form_submit_btn'>
-								SEND
-							</button>
-						</form>
+								<button type='submit' className='user_post_form_submit_btn'>
+									SEND
+								</button>
+							</form>
+						</div>
 					</div>
-					{articles.map((article) => {
+					{filteredArticles.map((article) => {
 						return (
-							<div key={article.id} className='container'>
+							<div key={article.id} data-id={article.id} className='container'>
 								<div className='home_post'>
 									<div className='homeTop'>
 										<div className='home_user'>
@@ -132,11 +153,13 @@ export default function Feed() {
 										</div>
 										<span className='postText'>{article.description}</span>
 									</div>
-									<div className='homeBottom'>
+									<div className='home_buttons'>
 										<div className='home_post_buttons'>
 											<FavoriteIcon
-												className={isLiked ? 'likeIcon--liked' : 'likeIcon'}
-												onClick={likeHandler}
+												className={
+													article.isLiked ? 'likeIcon--liked' : 'likeIcon'
+												}
+												onClick={(event) => likeHandler(event)}
 											/>
 											<span className='postLikeCounter'>{article.like}</span>
 											<div className='comments'>
@@ -146,8 +169,10 @@ export default function Feed() {
 												</span>
 											</div>
 											<PersonAddIcon
-												className={isFriend ? 'addIcon--friend' : 'addIcon'}
-												onClick={friendHandler}
+												className={
+													article.isFriend ? 'addIcon--friend' : 'addIcon'
+												}
+												onClick={(event) => friendHandler(event)}
 											/>
 										</div>
 									</div>

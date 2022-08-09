@@ -4,7 +4,6 @@
 	display: grid;
 	grid-template-rows: auto auto 3;
 	grid-template-columns: 15rem auto auto;
-
 	border-radius: 0px 0px 25px 25px;
 	-webkit-border-radius: 0px 0px 25px 25px;
 	-moz-border-radius: 0px 0px 25px 25px;
@@ -12,7 +11,7 @@
 
 #light .header {
 	transition: background-color 1s;
-	background-color: #bbbbbb;
+	background-color: #dedede;
 }
 
 #dark .header {
@@ -53,7 +52,6 @@
 
 .header_title_main {
 	justify-self: center;
-	cursor: pointer;
 	background-image: linear-gradient(
 		43deg,
 		#4158d0 0%,
