@@ -1,108 +1,43 @@
 .container_friends {
-<<<<<<< HEAD
-    background-color: rgb(222, 222, 222);
-   
-    height: 100vh;
-    display: grid;
-    border-radius: 30px;
-    margin: 10px;
-    justify-content: center;
-    justify-items: center;
-overflow-y: scroll;
-scrollbar-color: rebeccapurple green;
-scrollbar-width: thin;
-=======
-  display: flex;
-  height: 79.4vh;
-  margin-left: 10px;
-  margin-top: 10px;
-  margin-right: 10px;
-  margin-bottom: 20px;
-  border-radius: 20px;
-  width: 87.5vw;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: space-around;
-  align-items: stretch;
-  justify-content: space-between;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+	display: flex;
+	height: 79.4vh;
+	margin-left: 10px;
+	margin-top: 10px;
+	margin-right: 10px;
+	margin-bottom: 20px;
+	border-radius: 20px;
+	width: 87.5vw;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-content: space-around;
+	align-items: stretch;
+	justify-content: space-between;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
 }
 
 #dark .container_friends {
-  transition: background-color 1s;
-  background-color: rgb(47, 47, 47);
+	transition: background-color 1s;
+	background-color: rgb(47, 47, 47);
 }
->>>>>>> dev
 
 #light .container_friends {
-  transition: background-color 1s;
-  background-color: #dedede;
+	transition: background-color 1s;
+	background-color: #dedede;
+}
+>>>>>>>dev .friendTag {
+	transition: all 0.2s ease-in-out;
+	padding-left: 3rem;
+	color: rgb(0, 172, 0);
 }
 
-.friendTag {
-  transition: all 0.2s ease-in-out;
-  padding-left: 3rem;
-  color: rgb(0, 172, 0);
-}
-
-<<<<<<< HEAD
-.children_children_friends{
-	display: grid;
-	align-items: center;
-	justify-content: center;
-	border-radius: 20px;
-	border-bottom: 0em;
-	margin: 5px;
-	padding: 15px;
-	color: black;
-	width: 100vh;
-	font-family: 'Righteous', serif;
-	background: -webkit-linear-gradient(
-		269deg,
-		#4158d0 0%,
-		#c850c0 100%,
-		#ffcc70 46%
-	);
-}
-@media screen and ( max-width :650px ) {
-	.container_friends{
-	display: grid;
-	min-width: 50vh;
-	
-
-	}
-	.children_children_friends{
-
-		height: 15vh;
-		display: grid;
-		border-radius: 30px;
-		margin: 10px;
-		padding: 10px;
-		border-radius: 30px;
-		justify-content: center;
-		justify-items: center;
-	overflow-y: scroll;
-	scrollbar-color: rebeccapurple green;
-	scrollbar-width: thin;
-	
-
-
-
-
-
-	}
-
-}
-=======
 .friendTag:hover {
-  transform: scale(1.4);
-  transition: all 0.2s ease-in-out;
-  cursor: pointer;
+	transform: scale(1.4);
+	transition: all 0.2s ease-in-out;
+	cursor: pointer;
 }
 
 .friend_card--hide {
-  transition: all 0.2s ease-in-out;
-  display: none;
-}/*# sourceMappingURL=friends.css.map */
->>>>>>> dev
+	transition: all 0.2s ease-in-out;
+	display: none;
+} /*# sourceMappingURL=friends.css.map */

@@ -31,15 +31,11 @@ export default function Leftmenu() {
 			>
 				My profile
 			</NavLink>
-<<<<<<< HEAD
-			<NavLink to='/friends' className='form_profile'>
-=======
 			<NavLink
 				to='/friends'
 				className='form_profile'
 				activeClassName='selected'
 			>
->>>>>>> dev
 				My Friends
 			</NavLink>
 		</div>
