@@ -87,14 +87,20 @@ label {
   text-align: center;
 }
 .profile_email {
+  transition: color 1s;
+  font-size: larger;
   text-align: center;
   color: black;
 }
 .profile_password {
+  transition: color 1s;
+  font-size: larger;
   text-align: center;
   color: black;
 }
 .profile_password_confirm {
+  transition: color 1s;
+  font-size: larger;
   text-align: center;
   color: black;
 }
@@ -104,6 +110,7 @@ label {
   color: black;
 }
 .profile_btn {
+  transition: color 1s;
   cursor: pointer;
   margin-top: 20px;
   margin-top: 1rem;
@@ -112,13 +119,24 @@ label {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  background: url(../../../components/assets/pictures/arrow.svg) no-repeat;
-  background-size: 25px;
+}
+
+#dark .profile_email {
+  transition: color 1s;
+  color: azure;
+}
+#dark .profile_password {
+  transition: color 1s;
+  color: azure;
+}
+#dark .profile_password_confirm {
+  transition: color 1s;
+  color: azure;
 }
 
 #dark .profile_btn {
+  transition: color 1s;
   color: azure;
-  background-color: azure;
 }
 
 #dark .profile_firstname {
