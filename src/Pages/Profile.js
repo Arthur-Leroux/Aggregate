@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import './style/Profile/profile.css';
-import FileInput from '../components/FileInput/FileInput';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import myprofile from '../components/assets/data/myprofile';
+import SendIcon from '@mui/icons-material/Send';
 
 export default function Profile() {
 	const [firstname, setFirstname] = useState(myprofile.firstname);
@@ -159,9 +159,9 @@ export default function Profile() {
 									onChange={(event) => handleAddressChange(event.target.value)}
 								></input>
 							</div>
-							<button className='profile_btn' type='submit'>
+							<SendIcon className='profile_btn' type='submit'>
 								Send
-							</button>
+							</SendIcon>
 						</section>
 					</div>
 					<Card
@@ -227,9 +227,9 @@ export default function Profile() {
 									type='password'
 									placeholder='Confirm new password'
 								></input>
-								<button className='profile_btn' type='submit'>
+								<SendIcon className='profile_btn' type='submit' name='Send'>
 									Send
-								</button>
+								</SendIcon>
 							</form>
 						</section>
 					</div>
