@@ -1,8 +1,9 @@
 import React, { useState, useContext } from 'react';
-import { Navigate } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './login.css';
 import axios from 'axios';
 import { UserContext } from '../UserProvider/UserProvider';
+import userData from '../assets/data/myprofile';
 
 export default function Login() {
 	const [email, setEmail] = useState('');
@@ -23,8 +24,9 @@ export default function Login() {
 			params: { email, password },
 		})
 			.then((response) => {
-				console.log('response :', response);
-				//TODO: setUser({ email, password });
+				// Todo: quand la route /login sera OK
+				// 		 il faudra plutot utiliser ce qui se trouve dans response
+				setUser(userData);
 			})
 			.catch((error) => {
 				console.log('error :', error);
@@ -54,18 +56,14 @@ export default function Login() {
 							setPassword(event.target.value);
 						}}
 					></input>
-
-					<button>Login</button>
+					<button className='login_button'>Login</button>
 				</form>
 			</section>
 			<div className='redirect_user'>
 				<span className='redirect_user_question'>Not a member yet ?</span>
-				<span
-					className='redirect_user_link'
-					onClick={<Navigate to='/register' />}
-				>
+				<NavLink to='/register' className='redirect_user_link'>
 					Click here to register
-				</span>
+				</NavLink>
 			</div>
 		</>
 	);

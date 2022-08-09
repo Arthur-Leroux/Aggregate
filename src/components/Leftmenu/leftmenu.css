@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .form {
 	margin-top: 10px;
 	margin-left: 10px;
@@ -13,34 +14,66 @@
 	
 }
 
+=======
+>>>>>>> dev
 #light .form {
-	transition: background-color 1s;
-	background-color: rgb(222, 222, 222);
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  width: 17rem;
+  height: 81.6vh;
+  border-radius: 20px;
+  margin: 10px;
+  transition: background-color 1s;
+  background-color: rgb(222, 222, 222);
 }
 
 #dark .form {
-	transition: background-color 1s;
-	background-color: rgb(47, 47, 47);
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  width: 17rem;
+  height: 81.6vh;
+  border-radius: 20px;
+  margin: 10px;
+  transition: background-color 1s;
+  background-color: rgb(47, 47, 47);
 }
+
 .form_profile {
-	align-items: center;
-    display: grid;
-    justify-content: center;
-	font-family: 'Righteous', serif;
-	cursor: pointer;
-	background: -webkit-linear-gradient(
-		269deg,
-		#4158d0 0%,
-		#c850c0 100%,
-		#ffcc70 46%
-	);
-	background-clip: text;
-	-webkit-background-clip: text;
-	color: transparent;
-	transition: width 0.25s ease-out;
+  transition: background 1s ease-out;
+  font-family: "Righteous", serif;
+  font-size: larger;
+  cursor: pointer;
+  background: -webkit-linear-gradient(269deg, #4158d0 0%, #c850c0 100%, #ffcc70 46%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.form_profile.active {
+  transition: background 1s ease-out;
+  font-size: xx-large;
+}
+
+.form_profile:hover {
+  transition: background 1s ease-out;
+  background: -webkit-linear-gradient(149deg, #4158d0 0%, #c850c0 100%, #ffcc70 46%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .form_search {
+<<<<<<< HEAD
 	width: 16rem;
 	text-align: center;
 	color: black;
@@ -49,3 +82,13 @@
 #dark .form_search {
 	color: azure;
 }
+=======
+  width: 16rem;
+  text-align: center;
+  color: black;
+}
+
+#dark .form_search {
+  color: azure;
+}/*# sourceMappingURL=leftmenu.css.map */
+>>>>>>> dev

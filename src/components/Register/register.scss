@@ -34,7 +34,7 @@ input:focus{
   }
 }
 
-button{
+.register_button{
   margin-top: 1rem;
   padding-left: 2rem;
   padding-top: 0.3rem;
@@ -43,4 +43,16 @@ button{
   cursor: pointer;
   background: url(../assets/pictures/arrow.svg) no-repeat;
   background-size: 25px;
+}
+
+.redirect_user{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &_question{
+    font-size: larger;
+  }
+  &_link{
+    font-size: larger;
+  }
 }
