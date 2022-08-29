@@ -41,7 +41,6 @@ export default function Friends() {
 			isFriend && (descriptionMatches || contentMatches || usernameMatches)
 		);
 	});
-
 	return (
 		<>
 			<div className='container_friends'>

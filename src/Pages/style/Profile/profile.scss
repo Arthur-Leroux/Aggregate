@@ -83,14 +83,20 @@ label{
     text-align: center;
   }
   &_email{
+    transition: color 1s;
+    font-size: larger;
     text-align: center;
     color: black;
   }
   &_password{
+    transition: color 1s;
+    font-size: larger;
     text-align: center;
     color: black;
   }
   &_password_confirm{
+    transition: color 1s;
+    font-size: larger;
     text-align: center;
     color: black;
   }
@@ -100,6 +106,7 @@ label{
     color: black;
   }
   &_btn {
+    transition: color 1s;
     cursor: pointer;
     margin-top: 20px;
     margin-top: 1rem;
@@ -108,14 +115,28 @@ label{
   background-color: transparent;
   border: none;
   cursor: pointer;
-  background: url(../../../components/assets/pictures/arrow.svg) no-repeat;
-  background-size: 25px;
+  }
+}
+
+#dark .profile{
+  &_email{
+    transition: color 1s;
+    color: azure;
+  }
+  &_password{
+    transition: color 1s;
+    color: azure;
+  }
+  &_password_confirm{
+    transition: color 1s;
+    color: azure;
   }
 }
 
 #dark .profile_btn{
+  transition: color 1s;
   color: azure;
-  background-color: azure;
+  
 }
 
 #dark .profile{

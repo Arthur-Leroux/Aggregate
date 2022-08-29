@@ -364,6 +364,27 @@ padding: 1rem;
   cursor: pointer;
 }
 
+#dark .top_btn_style{
+  position: fixed;
+  z-index: 999;
+  bottom: -50px;
+  right: 125px;
+  transition: bottom 0.5s ease;
+  &.open{
+    bottom: 125px;
+  }
+}
+
+#dark .top_btn_style{
+  color: azure;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 2px solid azure;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 .upload_button{
   text-decoration: none;
 }
