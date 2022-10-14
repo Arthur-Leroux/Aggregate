@@ -1,8 +1,7 @@
 .App {
-	display: grid;
-	grid-template-rows: 20rem 10rem 10rem 10rem;
-	background-image: url(../assets/pictures/wave1.svg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: 100vh;
+	 display: grid;
+	 background-color: #ff9994;
+	 background-repeat: no-repeat;
+	 
 }
+
