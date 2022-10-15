@@ -3,6 +3,8 @@
 .App {
   display: grid;
   place-items: center;
+  height: 100%;
+  width: 100%;
 }
 .App_title_main {
   display: grid;
@@ -43,3 +45,23 @@
 .App_register {
   padding: 1rem;
 }/*# sourceMappingURL=App.css.map */
+@media screen and (max-width:650px){
+	.App{
+		display: grid;
+    height: 100%;
+    width: 100%;
+    
+	}
+}
+@media screen and (max-width:650px){
+	.App_title_main{
+		display: grid;
+    font-size: 4em;
+	}
+}
+/* @media screen and (max-width:912px){
+	.App_title_main{
+		display: grid;
+    font-size: 10em;
+	}
+} */
